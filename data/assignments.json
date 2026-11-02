@@ -8,24 +8,41 @@
     "due_at": "2026-11-03T08:30:00-05:00",
     "due_precision": "datetime",
     "points": 10,
-    "description_html": "<p>Submit your case write-up for Black &amp; Decker before class. Discussion questions: (1) Why is Black and Decker doing poorly in the tradesman segment? (2) How does the buying behavior of the tradesman impact the situation? (3) What can be the key resource that could help Black and Decker in the tradesman segment? Does Black and Decker have them? (4) Which action alternative should B&amp;D pursue?</p>",
+    "description_html": "<p>Please submit your case write-up for <strong>Black &amp; Decker. </strong>Please refer to the syllabus for instructions, as well as to the&nbsp;<strong>detailed class outline</strong> section for discussion questions. Case link is posted under <a title=\"Files\" href=\"https://yale.instructure.com/courses/122174/files\" data-course-type=\"navigation\" data-api-endpoint=\"https://yale.instructure.com/api/v1/courses/122174/folders/root\" data-api-returntype=\"Folder\">Files</a>.</p><p>Individual write-up on &#x27;The Black &amp; Decker Corporation (A)&#x27; (HBS 9-595-057, with a supplemental spreadsheet and video). Maximum 4 pages, with a heading for each question you answer. Upload it to Canvas before class. Discussion questions: (1) Why is Black and Decker doing poorly in the tradesman segment?</p><p>(2) How does the buying behavior of the tradesman affect the situation?</p><p>(3) What key resource could help B&amp;D in the tradesman segment, and does B&amp;D have it?</p><p>(4) Which action alternative should B&amp;D pursue?</p>",
     "canvas_url": "https://yale.instructure.com/courses/122174/assignments/611387",
     "canvas_assignment_id": 611387,
     "sources": [
       {
         "type": "canvas_assignment",
-        "ref": "https://yale.instructure.com/courses/122174/assignments/611387"
+        "ref": "https://yale.instructure.com/courses/122174/assignments/611387",
+        "quote": "Please submit your case write-up for Black & Decker."
       },
       {
         "type": "syllabus",
-        "ref": "MGT 411 Customer 2026 Syllabus, Session 3 discussion questions"
+        "ref": "cust_syllabus.txt (MGT 411 Customer 2026 Syllabus 10.23.26, file 13262832), Outline of Class Sessions, Session 3",
+        "quote": "Tue (11/3) Case: Black and Decker"
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Detailed Class Schedule, Session 3 Discussion Questions (p.6)",
+        "quote": "Why is Black and Decker doing poorly in the tradesman segment?"
+      },
+      {
+        "type": "lecture",
+        "ref": "cust_L1.txt (L1-Introduction_class.pdf, file 13269368), slide '2. Assignments (Case write-ups)'",
+        "quote": "Maximum 4 pages"
+      },
+      {
+        "type": "reading",
+        "ref": "cust_s3.txt (Session 3 Readings_FA26.pdf, file 13262836)",
+        "quote": "Black & Decker Corp. (A): Power Tools Division"
       }
     ],
     "cohort_scope": "silver",
-    "notes": "Seed item; replaced by the extraction run."
+    "notes": "Grading rules: at least 4 of the 5 write-ups are required and the top 4 count (40% of the grade). Submitting fewer than 4 scores 0 for the component and caps the course grade at Pass. Late policy: the L1 slides say the 6-hour grace period runs 'after your class session is over', so a late upload is accepted with a declining grade until about 3:50 PM; after that it scores 0. AI may be used only to polish wording; uploading the case to AI violates the honor code. Canvas says the case link is under Files, and the Session 3 Readings PDF (file 13262836) lists it."
   },
   {
-    "id": "state-society-memo-1-theory-of-regulation",
+    "id": "state-society-memo-1",
     "course": "state_society",
     "title": "Memo 1: Theory of Regulation",
     "kind": "memo",
@@ -33,38 +50,132 @@
     "due_at": "2026-11-03T23:59:00-05:00",
     "due_precision": "datetime",
     "points": 20,
-    "description_html": "<p>One-page analytical reflection memo (max 650 words) on the free-rider problem and a proposed regulation. Submit under the 10:05 AM (Silver cohort) section only.</p>",
+    "description_html": "<p class=\"p1\"><strong>Memo 1. Theory of Regulation (due November 3 by 11:59 PM) </strong></p>\n<p class=\"p1\">Prompt:</p>\n<p class=\"p1\"><em>In Lecture 2, we discussed the difficulty of constructing a market for clean air and non-rival goods more generally. This raises the free-rider problem: even if someone values clean air, they may refuse to pay for it because they will receive the benefits anyway.&nbsp;</em></p>\n<p class=\"p1\"><em>Can you think of examples from your time at SOM or your work or educational background in which you’ve experienced the free-rider problem? Can you think of examples when you’ve been a free-rider yourself? If you haven’t experienced this personally, can you think of a free-rider problem you’ve heard about within the SOM community?&nbsp;</em></p>\n<p><em>Propose an institutional design or regulation to address one of the problems you identified, grounded in the literature on regulation we discussed in class. Consider the challenges Mushfiq encountered in encouraging compliance with the September ban on Chilean hake fishing. How would your proposed regulation be enforced?&nbsp;</em></p>\n<p class=\"p1\"><span style=\"background-color: #fbeeb8;\">Please submit here if you attended the <strong>10:05 AM (Silver cohort) section</strong>.<br></span><strong>Do not </strong>submit under multiple sections.<span style=\"background-color: #fbeeb8;\"><br></span></p>",
     "canvas_url": "https://yale.instructure.com/courses/122176/assignments/611284",
     "canvas_assignment_id": 611284,
     "sources": [
       {
         "type": "canvas_assignment",
-        "ref": "https://yale.instructure.com/courses/122176/assignments/611284"
+        "ref": "https://yale.instructure.com/courses/122176/assignments/611284",
+        "quote": "Please submit here if you attended the 10:05 AM (Silver cohort) section."
+      },
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), p.5 and Appendix A pp.23-26",
+        "quote": "Memo 1. Theory of Regulation (due November 3 by 11:59 PM)"
+      },
+      {
+        "type": "announcement",
+        "ref": "State & Society Week 2 Update: Upcoming Assignments & Office Hours (2026-10-30), discussion_topics/875208",
+        "quote": "Memo 1: Due Tuesday 11/3 at 11:59pm"
+      },
+      {
+        "type": "announcement",
+        "ref": "State & Society: First Memo Assignment (2026-10-27), discussion_topics/873876",
+        "quote": "Late submissions will not be accepted."
       }
     ],
-    "cohort_scope": "silver"
+    "cohort_scope": "silver",
+    "notes": "Canvas due_at 2026-11-04T04:59:59Z is Nov 3, 11:59 PM EST, which matches the syllabus and both announcements. Canvas locks at 12:05 AM Nov 4, and late submissions are not accepted. Do not submit under more than one section. Canvas ties the copy to the section actually attended on Oct 29. Shane's submission state was 'unsubmitted' as of 2026-11-02."
   },
   {
-    "id": "competitor-session-3-cournot-homework",
+    "id": "competitor-hw-1-cournot",
     "course": "competitor",
-    "title": "Session 3 homework: Cournot and first-mover advantage",
+    "title": "Homework 1: Cournot and first-mover advantage",
     "kind": "homework",
     "work": "group",
-    "group_note": "Small learning team of 4 (Silver 1B); one submission per group.",
+    "group_note": "Small learning team (Silver 1B, inside Silver Cohort Group 1). One member submits in the Canvas text box; label the learning team, the Silver cohort, section 05 and every member's name.",
     "due_at": "2026-11-04T08:30:00-05:00",
     "due_precision": "datetime",
     "points": 5,
-    "description_html": "<p>Submit responses in the Canvas text box; mark the final answer for each question.</p>",
+    "description_html": "<p>Please submit your responses in the text box. Please clearly mark what your final answer is for each question.</p><p>Group-of-4 written assignment on Lecture 3 (Nov 2), entered in the Canvas text box with each final answer clearly marked. Hertz is alone at Bradley Airport with MC $20 and demand P = 140 − 2Q. (a) Find the monopoly quantity and price. (b) Find Avis&#x27;s residual demand and best quantity if Hertz stays at the monopoly quantity. (c–d) Derive both best-response functions. (e) Find the Cournot–Nash quantities and price and compare with (a). (f) Stackelberg: Hertz commits first. Find both quantities, the price and the profits, compare with Cournot, and explain why commitment matters. Label your Learning Team, cohort and all small-group members. AI is allowed.</p>",
     "canvas_url": "https://yale.instructure.com/courses/122173/assignments/592911",
     "canvas_assignment_id": 592911,
     "sources": [
       {
         "type": "canvas_assignment",
-        "ref": "https://yale.instructure.com/courses/122173/assignments/592911"
+        "ref": "https://yale.instructure.com/courses/122173/assignments/592911",
+        "quote": "Please clearly mark what your final answer is for each question."
+      },
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Detailed Outline 'Monday, Nov 2' and Class Sessions table (Nov 4)",
+        "quote": "Written assignment due for each group of 4. Due on Canvas by 8:30am."
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 1.pdf (Canvas file 13274775), slides 21 and 36",
+        "quote": "8:30 a.m. for all sections · Include all group members' names."
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 2.pdf (Canvas file 13305267), slide 25",
+        "quote": "Due Wednesday, November 4, at 8:30 a.m."
+      },
+      {
+        "type": "announcement",
+        "ref": "Upcoming Homework Assignments (2026-10-30) https://yale.instructure.com/courses/122173/discussion_topics/874106",
+        "quote": "November 4th before start of your section: First Homework Due"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-11-04T13:30Z = 08:30 EST. Matching sources: the syllabus Class Sessions table, Lecture 1 slides 21 and 36 ('8:30 a.m. for all sections') and Lecture 2 slide 25. The syllabus detailed outline and the 10/30 announcement say 'before your section', which would be 4:10 PM for Silver. The 8:30 AM time is enforced and supported by five sources, so that looser wording is overridden. Canvas calls it 'Session 3'; it is the Lecture 3 homework. Online text entry. The 'additional optional practice' (Enterprise entry) is not turned in."
+  },
+  {
+    "id": "competitor-join-small-group",
+    "course": "competitor",
+    "title": "Join a 'Small Group of 4' on Canvas",
+    "kind": "admin",
+    "work": "individual",
+    "due_at": "2026-11-04T08:30:00-05:00",
+    "due_precision": "approx",
+    "description_html": "<p>On the Canvas Groups page, join your small group under the &#x27;Small Group of 4&#x27; tab. A sign-up under &#x27;Student Group&#x27; alone, which is where &#x27;Silver 1B&#x27; lives, does not let the group submit. As of the 11/2 scrape, Shane is in &#x27;Silver Cohort Group 1&#x27; (Large Group of 8) and the student-organized group &#x27;Silver 1B&#x27;, but in no Small Group of 4. Homework 1 (due Nov 4, 8:30 AM) submits by Small Group of 4 on Canvas. In that category, &#x27;Silver Cohort Group 1B&#x27; has 0 members and &#x27;1A&#x27; has 3. All teammates must be Silver.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/groups",
+    "sources": [
+      {
+        "type": "announcement",
+        "ref": "More on group assignment (2026-10-27) https://yale.instructure.com/courses/122173/discussion_topics/873808",
+        "quote": "select your groups under the \"Large Group of 8\" and \"Small Group of 4\" tabs"
+      },
+      {
+        "type": "announcement",
+        "ref": "Welcome to Competitor (2026-10-23) https://yale.instructure.com/courses/122173/discussion_topics/872369",
+        "quote": "Please self-sign up for your groups on Canvas."
+      },
+      {
+        "type": "canvas_assignment",
+        "ref": "canvas_assignments.json id 592911 (group_category_id 13034); canvas-raw/competitor.json groups (59237 'Silver Cohort Group 1B', max_membership 4, members 0)",
+        "quote": "\"group_category_id\": 13034"
       }
     ],
     "cohort_scope": "silver",
-    "notes": "Canvas enforces 8:30 AM; the syllabus says before your section."
+    "notes": "No explicit deadline. The 10/23 announcement asked for sign-up the weekend before the 10/26 class, and the 10/27 announcement asked students to finish the tab sign-ups. The date used is the latest workable moment: Homework 1 (Canvas 592911) is the first assignment Canvas submits by group category 13034. Canvas returned 403 for the category names. The mapping is inferred from raw group data: every 13034 group has max_membership 4 ('Small Group of 4'), every 13033 group has max_membership 8 ('Large Group of 8'), and 'Silver 1B' in 13036 has role 'student_organized' ('Student Group'). This confirms what both lenses guessed."
+  },
+  {
+    "id": "state-society-debate-email",
+    "course": "state_society",
+    "title": "Email debate speakers and slides (Learning Team 1)",
+    "kind": "admin",
+    "work": "group",
+    "group_note": "Learning Team 1. Email speaker names and any PowerPoint slides to Elena Schiefele, the Silver TAs and both professors by 5 PM.",
+    "due_at": "2026-11-04T17:00:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>By 5 PM the night before the debate, email the names of LT 1&#x27;s main speaker and rebuttal speaker, plus any slides. Send it to Elena Schiefele (elena.schiefele@yale.edu), the Silver TAs Mariam Hassoun (mariam.hassoun@yale.edu) and Marley Brown (marley.brown@yale.edu), and both professors (ahmed.mobarak@yale.edu, ian.shapiro@yale.edu). Slides are optional, earn no extra credit, and must be PowerPoint (export Google Slides to .pptx). Slides for the rebuttal are discouraged. The email with speaker names is required even with no slides.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/discussion_topics/875208",
+    "sources": [
+      {
+        "type": "announcement",
+        "ref": "State & Society Week 2 Update (2026-10-30), https://yale.instructure.com/courses/122176/discussion_topics/875208",
+        "quote": "by 5pm the night before your debate with the names of your speakers"
+      },
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), Meeting 4 p.11; Appendix B items 3-4 p.27",
+        "quote": "Slides, if any, should be in PowerPoint format"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "Nov 4 17:00 is 'night before' the Thursday Nov 5 debate. The syllabus attaches the 5 PM deadline only to slides. Appendix B item 4 and the announcement make the email itself (speaker names) required. LT 1 is inferred from the MGT 401 group name and is not stated by any State & Society source. Confirm the team number and who sends the email today: the deadline is less than 48 hours away. Professors' emails come from the extractors, from the syllabus contact block. Nov 4 17:00 EST is the night before the Thu Nov 5 debate (syllabus: 'November 5: Debate on Amazon's Search for HQ2 (LT 1 and 2)'). The Week 2 announcement attaches the 5 PM deadline to the email with speaker names. The syllabus attaches it only to slides. Appendix B item 4 makes the email required. LT 1 was checked against Canvas on 2026-11-02:\n- MGT 401 (course 122085) has five sets of Team 1-9, one per cohort."
   },
   {
     "id": "investor-join-homework-group",
@@ -74,23 +185,101 @@
     "work": "individual",
     "due_at": "2026-11-04T23:59:00-05:00",
     "due_precision": "date",
-    "description_html": "<p>People tab → Homework Groups → join a group of up to four. Homework grades depend on the group.</p>",
+    "description_html": "<p>Go to People &gt; &#x27;Homework Groups&#x27; tab on Canvas (not &#x27;Everyone&#x27;), then join an open &#x27;Homework Group N&#x27; or the one your groupmates are in. Groups hold up to four. Homework grades depend on the group you belong to. If you cannot find a group, email a Silver TA (Aurelia Gong, Khushi Goyal or Jonathan Roy) and they will place you. Your current group, &#x27;Silver 1A&#x27;, is in a different group set from the one the homework submissions use, so make sure you and your teammates also join the same &#x27;Homework Group N&#x27;.</p>",
     "canvas_url": "https://yale.instructure.com/courses/122175/groups",
-    "sources": [{ "type": "announcement", "ref": "Week 2 Announcement (2026-11-01)" }],
-    "cohort_scope": "all"
+    "sources": [
+      {
+        "type": "announcement",
+        "ref": "Week 2 Announcement, 2026-11-01, https://yale.instructure.com/courses/122175/discussion_topics/875471",
+        "quote": "Aim to form groups of up to four by end of day 11/4 [Wednesday]."
+      },
+      {
+        "type": "announcement",
+        "ref": "Homework groups, 2026-10-26, https://yale.instructure.com/courses/122175/discussion_topics/873118",
+        "quote": "Please form the groups on Canvas as soon as possible."
+      },
+      {
+        "type": "syllabus",
+        "ref": "inv_syllabus.txt (MGT 412 Investor Fall 2026 Syllabus, file 13269174), Descriptions of Assignments: Homework",
+        "quote": "before the first class, please sign up for a homework group on Canvas"
+      },
+      {
+        "type": "canvas_assignment",
+        "ref": "canvas_assignments.json + groups.txt (category 13038 = 'Homework Group 1-100'; 59271 'Silver 1A' = category 13041)",
+        "quote": "group_category_id 13038"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "The syllabus originally asked for sign-up 'before the first class' (Silver's first class was Tue 10/27, 1:00 PM), so that is already past. The 11/1 announcement sets a softer target of 'end of day 11/4' with no exact time, and I used that date. No Canvas assignment enforces it. I re-checked groups.txt: category 13038 holds only 'Homework Group 1-100', the set the homework assignments use. Category 13041 holds the cohort-named groups students created, including Shane's 'Silver 1A'. Because the assignments use 13038, an upload from 'Silver 1A' will probably not count as a group submission for every member."
   },
   {
     "id": "state-society-debate-amazon-hq2",
     "course": "state_society",
-    "title": "Learning Team Debate: Amazon HQ2 (LT 1 vs 2)",
+    "title": "Learning team debate: Amazon HQ2 (LT 1 vs LT 2)",
     "kind": "debate",
     "work": "group",
-    "group_note": "Learning Team 1; two speakers; slides (PowerPoint) and speaker names emailed by 5 PM the night before.",
+    "group_note": "Learning Team 1 (the AASL learning team from Managing Groups & Teams). Two speakers present and rebut; everyone prepares and is peer-graded.",
     "due_at": "2026-11-05T10:05:00-05:00",
     "due_precision": "datetime",
-    "canvas_url": "https://yale.instructure.com/courses/122176",
-    "sources": [{ "type": "syllabus", "ref": "State and Society 2026 syllabus v6, Appendix B" }],
-    "cohort_scope": "silver"
+    "points": 13,
+    "description_html": "<p>In-class debate in Meeting 4 (Weak States and Incomplete Contracts: Tata in West Bengal and Amazon&#x27;s HQ2). LT 1 argues: &#x27;Amazon should not have run a bidding war between cities to identify a site for HQ2.&#x27; LT 2 argues the RFP was a societally efficient way to find the best match. Format: 3-minute presentation plus 2-minute rebuttal. Build an evidence-based argument and research LT 2&#x27;s side for the rebuttal. Rubric (13): argument 5, rebuttal 3, persuasion of class (change in class vote) 3, peer-graded effort 2. Worth 15% of the course grade. Readings: Kasavin, &#x27;Amazon: The Search for HQ2&#x27;; Alfaro et al., &#x27;Tata Motors in Singur&#x27;; FT, &#x27;Thais make a mess of their muddling&#x27;; NYT, &#x27;The Brave New World of General Motors&#x27;.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/files/13275886",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), p.5 debate schedule; Appendix B pp.27-30 Debate Topics",
+        "quote": "November 5: Debate on Amazon's Search for HQ2 (LT 1 and 2)"
+      },
+      {
+        "type": "announcement",
+        "ref": "State & Society Week 2 Update (2026-10-30), https://yale.instructure.com/courses/122176/discussion_topics/875208",
+        "quote": "First Learning Team Debate: Thursday 11/5 in class (Learning Teams 1&2)"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "There is no Canvas assignment. The canvas_url conflict was resolved in favour of the syllabus file (structured lens) over the announcement (prose lens), because the syllabus holds the topic, the LT sides and the rubric. due_local is Silver's class start; the debate's slot within the session is not given. The LT number is inferred. If it is wrong: LT 3-4 debate Nov 12 (Zerit), LT 5-7 Dec 10 (immigration), LT 8-9 Dec 15 (privatization), each with the email due 5 PM the day before. A peer-grading poll follows the debate, with no deadline given."
+  },
+  {
+    "id": "competitor-hw-2-repeated-pricing",
+    "course": "competitor",
+    "title": "Homework 2: Repeated pricing AI project",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Small learning team (Silver 1B). One runnable program, figures and report per group; one member uploads with all names, cohort and section.",
+    "due_at": "2026-11-09T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 5,
+    "description_html": "<p>Lecture 4 computational project for a group of 4. The questions are in &#x27;MGT410 Lecture 4 Homework Questions&#x27; (Canvas file 13263842). Do Q1–3; Q4 is optional. Q1: sustain $10 by hand under grim trigger and a two-round punishment. Q2: compare a permanent and a one-round demand doubling. Q3: simulate demand switching between 0.5 and 1.5 at δ = 0.8, with a $9.99 deviation under K = 2, 3, 5 and grim trigger; add incentive audits, heatmaps over δ and K, a payoff table and a persistent-demand variant. Do the hand calculations first, then use AI to build a reproducible program. Upload one runnable program, its figures and a report of at most 5 pages of text. Record the AI tool, one useful prompt and one substantive check. Verify $0 at $2/$2, $6,400 each at $10, and your hand thresholds.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/assignments/592912",
+    "canvas_assignment_id": 592912,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122173/assignments/592912"
+      },
+      {
+        "type": "lecture",
+        "ref": "comp_hw4q.txt (MGT410 Lecture 4 Homework Questions, https://yale.instructure.com/courses/122173/files/13263842)",
+        "quote": "Work in groups of four. Complete Questions 1–3; Question 4 is optional."
+      },
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Detailed Outline 'Wednesday, Nov 4'",
+        "quote": "AI-assisted computational project, group of 4."
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 1.pdf slide 21 / Lecture 2.pdf slide 25",
+        "quote": "Lecture 4 AI project — Due Monday, November 9, at 8:30 a.m."
+      },
+      {
+        "type": "announcement",
+        "ref": "Upcoming Homework Assignments (2026-10-30)",
+        "quote": "November 9th before start of your section: Second Homework Due"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-11-09T13:30Z = 08:30 EST, matching the syllabus table and Lecture 1 slides 21 and 36 and Lecture 2 slide 25. The 'before your section' wording in the outline and announcement is overridden as for Homework 1. The syllabus table puts it on the Nov 9 row and the outline under Nov 4; both point to the same deliverable. The Canvas description is empty; instructions are in file 13263842. Canvas has no group category (online_upload), so only the uploader's submission is logged. Label all members. Canvas calls it 'Session 4'."
   },
   {
     "id": "customer-case-2-stickk",
@@ -101,15 +290,65 @@
     "due_at": "2026-11-10T08:30:00-05:00",
     "due_precision": "datetime",
     "points": 10,
+    "description_html": "<p>Please submit your case write-up for <strong>stickK.com</strong><strong>. </strong>Please refer to the syllabus for instructions, as well as to the&nbsp;<strong>detailed class outline</strong> section for discussion questions. Case link is posted under <a title=\"Files\" href=\"https://yale.instructure.com/courses/122174/files\" data-course-type=\"navigation\" data-api-endpoint=\"https://yale.instructure.com/api/v1/courses/122174/folders/root\" data-api-returntype=\"Folder\">Files</a>.</p><p>Individual write-up on &#x27;Making stickK Stick: The Business of Behavioral Economics&#x27; (HBS 514019). Maximum 4 pages, with a heading for each question. Upload it before class. Questions: (1) How would stickK.com help people meet their goals, and what type of person would it work for?</p><p>(2) How does stickK.com use principles from Consumer Behavior and Behavioral Economics, and how might you improve the product using them?</p><p>(3) How does stickK.com make money, and is the business model viable?</p><p>(4) What are stickK.com&#x27;s primary barriers to success?</p><p>(5) Should Jordan Goldberg focus on the B2C business or build out the B2B business?</p>",
     "canvas_url": "https://yale.instructure.com/courses/122174/assignments/611388",
     "canvas_assignment_id": 611388,
     "sources": [
       {
         "type": "canvas_assignment",
-        "ref": "https://yale.instructure.com/courses/122174/assignments/611388"
+        "ref": "https://yale.instructure.com/courses/122174/assignments/611388",
+        "quote": "Please submit your case write-up for stickK.com."
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Outline of Class Sessions, Session 5",
+        "quote": "Tue (11/10) Case: stickK.com"
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Detailed Class Schedule, Session 5 Discussion Questions (pp.6-7)",
+        "quote": "focusing on the B2C business or building out the B2B business?"
       }
     ],
-    "cohort_scope": "silver"
+    "cohort_scope": "silver",
+    "notes": "This is one of 5 write-ups; at least 4 are required. The 6-hour declining-grade grace period runs from the end of class (until about 3:50 PM); after that the grade is 0. Session 5 is taught with Gal Zauberman."
+  },
+  {
+    "id": "competitor-hw-3-walmart-target",
+    "course": "competitor",
+    "title": "Homework 3: Walmart vs. Target fieldwork and memo",
+    "kind": "fieldwork",
+    "work": "group",
+    "group_note": "Small learning team (Silver 1B). Visit a Walmart (Hamden) and a Target (North Haven), in pairs if you like; one member uploads the memo with all names.",
+    "due_at": "2026-11-11T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 5,
+    "description_html": "<p>Read the Walmart vs. Target case (vol11.cases.som.yale.edu/walmart-vs-target). Using it and your Accounting 10-K work, form hypotheses about how the chains position and differentiate, and which measurable store characteristics should differ. Fieldwork with your small group: visit, perhaps in pairs, a Walmart (there is one in Hamden) and a Target (there is one in North Haven). Measure the same 3–4 store characteristics at both (e.g., aisle width). Plan the visits early. Write a memo of roughly 2 pages, 1.5-spaced, plus exhibits if needed: (1) what the case and 10-Ks imply about positioning, and the hypotheses that followed; (2) whether your data support them. Label your section, cohort, learning team and all small-group members. For class discussion only, not the write-up: Should Walmart or Target change its positioning, how, and against what obstacles? Pick one non-U.S. market: what would they have to change to succeed there?</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/assignments/592913",
+    "canvas_assignment_id": 592913,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122173/assignments/592913"
+      },
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Detailed Outline 'Wednesday, Nov 11'",
+        "quote": "Write a short memo (roughly 2 1.5-spaced pages plus possibly exhibits)"
+      },
+      {
+        "type": "announcement",
+        "ref": "Upcoming Homework Assignments (2026-10-30)",
+        "quote": "requires your team to visit both a Target and a Walmart location"
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 1.pdf slide 21",
+        "quote": "Lec 6 · Walmart vs. Target | Wed Nov 11 | Small group | Allowed"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "The prose lens split this into three items: fieldwork (approx), memo and same-day discussion prep. They are merged here because all three are steps of one syllabus assignment with one Canvas deadline. The store visits must happen before 11/11 08:30; the TAs warn not to leave them to the last minute. The discussion questions are for the 4:10 PM class the same day. Canvas due_at 2026-11-11T13:30Z = 08:30 EST, matching the syllabus table and slide 21. The outline ('beginning of class') and the announcement ('before start of your section') are overridden. Canvas calls it 'Session 7'; it is Lecture 6. The Canvas description is empty and there is no group category. AI is allowed. The store visits must happen before 11/11 08:30, and the TAs warn not to leave them to the last minute. Canvas due_at 2026-11-11T13:30Z = 08:30 EST, matching the syllabus table ('Answers due on Canvas by 8:30am')."
   },
   {
     "id": "investor-homework-1",
@@ -117,19 +356,484 @@
     "title": "Homework 1",
     "kind": "homework",
     "work": "group",
-    "group_note": "Homework group of up to four; one submission per group.",
+    "group_note": "Homework group of up to four; one submission per group, same grade for all. Shane is not yet in a Canvas 'Homework Group N' (his 'Silver 1A' group is a different set), so confirm the group before submitting.",
     "due_at": "2026-11-11T23:59:00-05:00",
     "due_precision": "datetime",
     "points": 0,
+    "description_html": "<p>First of four homework assignments, done in groups of up to four, to help you master concepts from class. Topics are not stated yet; the handout is not posted. The syllabus lists it under Week 3, but for Silver it is due Wed 11/11, before Thursday&#x27;s Investment Management Industry class. It likely covers Weeks 1-2 (returns and risk, asset allocation) and possibly the CAPM (Tue 11/10). Submit one assignment per group (online upload) through the Canvas Assignments tab, with a cover page listing every member. Graded pass/fail, and late homework gets no credit. Do not collaborate with other groups. AI use is allowed on homework.</p>",
     "canvas_url": "https://yale.instructure.com/courses/122175/assignments/609743",
     "canvas_assignment_id": 609743,
     "sources": [
       {
         "type": "canvas_assignment",
-        "ref": "https://yale.instructure.com/courses/122175/assignments/609743"
+        "ref": "https://yale.instructure.com/courses/122175/assignments/609743",
+        "quote": "due_at_utc 2026-11-12T04:59:59Z; group_category_id 13038"
+      },
+      {
+        "type": "syllabus",
+        "ref": "inv_syllabus.txt, Course Requirements table",
+        "quote": "Homework #1 due: 11/11"
+      },
+      {
+        "type": "announcement",
+        "ref": "Week 2 Announcement, 2026-11-01, https://yale.instructure.com/courses/122175/discussion_topics/875471",
+        "quote": "11/11: Homework #1 due date"
       }
     ],
-    "cohort_scope": "all"
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-11-12T04:59:59Z = Wed 11/11, 11:59 PM EST. The syllabus and the Week 2 announcement both say 11/11 with no time, so the sources agree. The Canvas description is empty, and no handout is in the Files tab yet. The syllabus says students get a week for each homework, so expect release around 11/4. Canvas shows 0 points because homework is pass/fail; the four homeworks together are 30% of the grade."
+  },
+  {
+    "id": "state-society-memo-2",
+    "course": "state_society",
+    "title": "Memo 2: Angry Populist Politics and Business",
+    "kind": "memo",
+    "work": "individual",
+    "due_at": "2026-11-15T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 20,
+    "description_html": "<p>Individual one-page analytical reflection memo on the Nov 10 class (Angry Populist Politics and its Implications for Business). The prompt is not posted yet; Canvas unlocks it Wed Nov 11, 5:00 PM EST. Format as for every memo: at most 650 words on one single-spaced 12-pt page, a context paragraph first (100-200 words) and the analysis after it, in-text citations, works cited on page 2. Submit a Word .doc named Silver_&lt;NetID&gt;_Memo2.doc with no name. Rubric: connection 8, analysis 8, style 4. No AI-written text.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/assignments/611422",
+    "canvas_assignment_id": 611422,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122176/assignments/611422",
+        "quote": "Memo 2 (10:05 AM Section)"
+      },
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), p.5, Meeting 5 p.12, Appendix A Memo Topics p.26",
+        "quote": "Memo 2. Angry Populist Politics and Business (due November 15 by 11:59 PM)"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "Canvas due_at 2026-11-16T04:59:59Z is Sun Nov 15, 11:59 PM EST, which matches the syllabus. Unlocks 2026-11-11T22:00Z; locks Nov 16, 12:05 AM EST. Late submissions are not accepted. The Canvas description is empty until the prompt is released. Submit under the section attended on Nov 10."
+  },
+  {
+    "id": "competitor-hw-4-double-marginalization",
+    "course": "competitor",
+    "title": "Homework 4: Double marginalization and vertical contracts",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Small learning team (Silver 1B). One member uploads with all names, cohort and section.",
+    "due_at": "2026-11-18T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 5,
+    "description_html": "<p>Group-of-4 written assignment from the Nov 16 lecture. Demand is q = 250 − 50p and manufacturer MC is 0.2. Part 1, vertical integration: quantity, price, profit, consumer surplus and markup. Part 2, double marginalization: the retailer&#x27;s q*(w), the manufacturer&#x27;s optimal w, the resulting price, both profits, channel profit, consumer surplus and three markups, and who is worse off. Part 3, contracts: two-part tariff; a retailer outside option of 40 (who bears demand risk?); maximum resale price of 2.6 (show channel profit = 288 for any w in [0.2, 2.6]); quantity forcing at 120 units; then compare the contracts on information and uncertainty. Readings: Pindyck &amp; Rubinfeld, appendix to ch. 11, and CBS &#x27;60 Minutes&#x27; &#x27;Sticker Shock&#x27;.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/assignments/592914",
+    "canvas_assignment_id": 592914,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122173/assignments/592914"
+      },
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Detailed Outline 'Monday, Nov 16'",
+        "quote": "Written assignment, group of 4. Due on Canvas before your section on Wednesday, November 18"
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 1.pdf slide 21",
+        "quote": "Lec 7 · Vertical contracts | Wed Nov 18 | Small group | Allowed"
+      },
+      {
+        "type": "announcement",
+        "ref": "Upcoming Homework Assignments (2026-10-30)",
+        "quote": "November 18th before start of your section: Transfer Pricing Homework Due"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-11-18T13:30Z = 08:30 EST, matching the syllabus table and slide 21. The 'before your section' wording in the outline and announcement is overridden. Canvas title: 'Session 8 Transfer Pricing, Double Marginalization and Franchising'. The announcement calls it the 'Transfer Pricing Homework' and slide 21 'Lec 7 · Vertical contracts'. The Canvas description is empty and there is no group category. AI is allowed. The Nov 18 co-opetition prep questions are optional and excluded."
+  },
+  {
+    "id": "investor-homework-2",
+    "course": "investor",
+    "title": "Homework 2",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Homework group of up to four; one submission per group, same grade for all.",
+    "due_at": "2026-11-18T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 0,
+    "description_html": "<p>Second of four pass/fail group homeworks, due in Week 4. The syllabus does not say what HW2 covers; it only lists Homework #2 next to the Week 4 topics, Performance Evaluation and (In)efficient Markets, and the Silver class on (In)efficient Markets (Thu 11/19) comes after the deadline. Groups of up to four. Collaborating with other groups is prohibited. Submit one assignment per group through the Canvas Assignments tab, with a cover page naming all members; every member gets the same grade. You get about a week to complete it. No credit if late. Solutions are distributed after the deadline. Course-wide: some homework questions apply class techniques to real-world data and need Excel.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122175/assignments/609744",
+    "canvas_assignment_id": 609744,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122175/assignments/609744",
+        "quote": "due_at_utc 2026-11-19T04:59:59Z"
+      },
+      {
+        "type": "syllabus",
+        "ref": "inv_syllabus.txt, Course Requirements table",
+        "quote": "Homework #2 due: 11/18"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-11-19T04:59:59Z = Wed 11/18, 11:59 PM EST. This matches the syllabus (11/18, which gives no time). The Canvas description is empty and no handout is posted yet. The syllabus says 'We will give you a week to complete each assignment', so the handout should appear around 11/11. Canvas shows 0 points because homework is pass/fail; homework as a whole is 30% of the course grade."
+  },
+  {
+    "id": "customer-case-3-pepsi",
+    "course": "customer",
+    "title": "Case Write-Up #3: Pepsi",
+    "kind": "case_writeup",
+    "work": "individual",
+    "due_at": "2026-11-19T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 10,
+    "description_html": "<p>Please submit your case write-up for <strong>Pepsi</strong><strong>. </strong>Please refer to the syllabus for instructions, as well as to the&nbsp;<strong>detailed class outline</strong> section for discussion questions. Case link is posted under <a title=\"Files\" href=\"https://yale.instructure.com/courses/122174/files\" data-course-type=\"navigation\" data-api-endpoint=\"https://yale.instructure.com/api/v1/courses/122174/folders/root\" data-api-returntype=\"Folder\">Files</a>.</p><p>Individual write-up on the &#x27;Pepsi&#x27; Yale SOM Raw Case (log in with your NetID). Maximum 4 pages, with a heading for each question. Upload it before class. Questions: (1) What are the strengths and weaknesses of Pepsi&#x27;s past youth-focused marketing strategies, and when would this approach work?</p><p>(2) From 2012 to 2017 the cola market fell 12.5%, but Pepsi&#x27;s revenue fell 22% against Coke&#x27;s 11%. Why did Pepsi suffer more?</p><p>(3) Should Todd Kaplan keep targeting the youth market or increase share of wallet? Recommend one and justify it. Optional reading: Reuters, &#x27;Elliott calls for turnaround at PepsiCo&#x27; (Sept 2, 2025).</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122174/assignments/611389",
+    "canvas_assignment_id": 611389,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122174/assignments/611389",
+        "quote": "Please submit your case write-up for Pepsi."
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Outline of Class Sessions, Session 8",
+        "quote": "Thu (11/19) Case: Pepsi"
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Detailed Class Schedule, Session 8 Discussion Questions (p.7)",
+        "quote": "Why did Pepsi suffer more significantly than Coke during this period?"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "This is the last write-up before Thanksgiving break. It is one of 5 write-ups; at least 4 are required. The 6-hour declining-grade grace period runs from the end of class; after that the grade is 0."
+  },
+  {
+    "id": "state-society-memo-3",
+    "course": "state_society",
+    "title": "Memo 3: Business and the South African Transition",
+    "kind": "memo",
+    "work": "individual",
+    "due_at": "2026-11-22T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 20,
+    "description_html": "<p>Individual one-page analytical reflection memo on the Nov 17 class, which covers business&#x27;s role in South Africa&#x27;s 1994 transition and the Yale SOM case &#x27;We Don&#x27;t Have to be Cuba; We Can Be Brazil&#x27;. The prompt unlocks on Canvas Wed Nov 18, 5:00 PM EST. Format: at most 650 words on one single-spaced 12-pt page, a context paragraph and then the analysis, in-text citations, works cited on page 2. Submit a Word .doc named Silver_&lt;NetID&gt;_Memo3.doc with no name. Rubric: connection 8, analysis 8, style 4. No AI-written text.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/assignments/611425",
+    "canvas_assignment_id": 611425,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122176/assignments/611425",
+        "quote": "Memo 3 (10:05 AM Section)"
+      },
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), p.5, Meeting 7 p.15, Appendix A Memo Topics p.26",
+        "quote": "Memo 3. Business and the South African Transition (due November 22 by 11:59 PM)"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "Canvas due_at 2026-11-23T04:59:59Z is Sun Nov 22, 11:59 PM EST, which matches the syllabus. Unlocks Nov 18, 5 PM EST; locks Nov 23, 12:05 AM EST. Due on the eve of November recess (Nov 23-27). Late submissions are not accepted. The description is empty until the prompt is posted."
+  },
+  {
+    "id": "competitor-prep-industry-analysis",
+    "course": "competitor",
+    "title": "Prep: industry analysis framework questions",
+    "kind": "prep",
+    "work": "individual",
+    "due_at": "2026-11-30T16:10:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>Read Porter, &#x27;The Five Competitive Forces that Shape Strategy&#x27; (HBR R0801E), and Hubbard, &#x27;Industry Analysis and Oligopoly Models&#x27;. Prepare: (1) for each industry-analysis factor, what accounting data (e.g., in a 10-K) would inform it, such as signs of high barriers to entry; (2) how complements fit into industry analysis; (3) start sketching the industry analysis for your assigned industry (Commercial Aircraft Manufacturing for Group 1). Not turned in.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/files/13263830",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Class Sessions (Nov 30) and Detailed Outline 'Monday, Nov 30'",
+        "quote": "Preparation questions posted / do not turn in"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Syllabus: 'Preparation questions posted / do not turn in'. The lenses disagreed on the number: one said Session 9, the other 'Session 10'. Counting the syllabus meetings, Nov 30 is the 9th class, consistent with the slide 21 numbering (Lec 11 = Dec 7, Lec 13 = Dec 14)."
+  },
+  {
+    "id": "competitor-prep-spotify-case",
+    "course": "competitor",
+    "title": "Prep: Spotify industry analysis case questions",
+    "kind": "prep",
+    "work": "individual",
+    "due_at": "2026-12-02T16:10:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>Read &#x27;Spotify: Face the Music&#x27; (IES473-PDF-ENG). Prepare: (1) record labels pre-internet: what does a record label do, and sketch a 5(6)-forces industry analysis for them; (2) record labels today: how has the value chain changed, and how would the industry analysis change; (3) where Spotify fits in the value chain from songwriters to consumers, and why Spotify has been more successful than Rhapsody despite clear similarities in their business models; (4) does Spotify have a sustainable competitive advantage, and what impedes its profitability. Not turned in; come ready for cold-calls.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/files/13263830",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Class Sessions (Dec 2) and Detailed Outline 'Wednesday, Dec 2'",
+        "quote": "Spotify: Face the Music, IES473-PDF-ENG"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Syllabus: 'Preparation questions posted / do not turn in'. This is the 10th class meeting (the prose lens labeled it Session 11). Syllabus: 'Preparation questions posted / do not turn in' (required, not marked optional). This is the 10th class meeting, and the syllabus numbers lectures sequentially. Canvas assignment names use a different scheme (Dec 7 = 'Session 12', Dec 14 = 'Session 14'), which would make this Session 11."
+  },
+  {
+    "id": "investor-homework-3",
+    "course": "investor",
+    "title": "Homework 3",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Homework group of up to four; one submission per group, same grade for all.",
+    "due_at": "2026-12-02T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 0,
+    "description_html": "<p>Third of four pass/fail homeworks, done in groups of up to four. The syllabus outline lists it under Week 5 (Nov 30-Dec 3). The syllabus says some homework questions apply class techniques to real-world data and some need Excel. Submit one assignment per group through the Canvas Assignments tab, with a cover page naming every member. All members get the same grade. Late homework gets no credit. Solutions come out after the deadline.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122175/assignments/609745",
+    "canvas_assignment_id": 609745,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122175/assignments/609745",
+        "quote": "due_at_utc 2026-12-03T04:59:59Z"
+      },
+      {
+        "type": "syllabus",
+        "ref": "inv_syllabus.txt, Course Requirements table",
+        "quote": "Homework #3 due: 12/2"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-12-03T04:59:59Z = Wed 12/2, 11:59 PM EST. This matches the syllabus (12/2). It is due in the first week back from November recess (Nov 23-27), so the one-week work window likely overlaps the break. The Canvas description is empty. Canvas due_at 2026-12-03T04:59:59Z is Wed 12/2 at 11:59 PM EST, which matches the syllabus (12/2). The syllabus says each assignment gets a week, so the work window probably overlaps November recess (Nov 23-27). The syllabus lists HW3 under Week 5 but does not say which topics it covers. Canvas group category 13038 does not match Shane's group, Silver 1A (category 13041); see the group note."
+  },
+  {
+    "id": "customer-case-4-aqualisa",
+    "course": "customer",
+    "title": "Case Write-Up #4: Aqualisa Quartz",
+    "kind": "case_writeup",
+    "work": "individual",
+    "due_at": "2026-12-03T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 10,
+    "description_html": "<p>Please submit your case write-up for <strong>Aqualisa Quartz</strong><strong>. </strong>Please refer to the syllabus for instructions, as well as to the&nbsp;<strong>detailed class outline</strong> section for discussion questions. Case link is posted under <a title=\"Files\" href=\"https://yale.instructure.com/courses/122174/files\" data-course-type=\"navigation\" data-api-endpoint=\"https://yale.instructure.com/api/v1/courses/122174/folders/root\" data-api-returntype=\"Folder\">Files</a>.</p><p>Individual write-up on &#x27;Aqualisa Quartz: Simply a Better Shower&#x27; (HBS 9-502-030, with a supplemental spreadsheet and the Managing Director&#x27;s Note). Maximum 4 pages, with a heading for each question. Upload it before class. Questions: (1) Is Aqualisa Quartz a good product? Who benefits from the Quartz shower, and how?</p><p>(2) Why has the Quartz shower not been selling? Analyze Aqualisa&#x27;s go-to-market strategy and its challenges.</p><p>(3) What should Rawlingson do to generate sales momentum for Quartz? Develop alternative strategies to improve market share.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122174/assignments/611390",
+    "canvas_assignment_id": 611390,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122174/assignments/611390",
+        "quote": "Please submit your case write-up for Aqualisa Quartz."
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Outline of Class Sessions, Session 10",
+        "quote": "Thu (12/3) Case: Aqualisa"
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Detailed Class Schedule, Session 10 Discussion Questions (p.8)",
+        "quote": "Why has the Quartz shower not been selling?"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "It is one of 5 write-ups; at least 4 are required. The 6-hour declining-grade grace period runs from the end of class; after that the grade is 0."
+  },
+  {
+    "id": "competitor-hw-5-industry-analysis",
+    "course": "competitor",
+    "title": "Homework 5: Industry analysis of commercial aircraft (memo and 3 slides)",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Small learning team (Silver 1B). Group number 1 means commercial aircraft manufacturing. No AI on this one. A subset of groups presents in class (10 to 12 minutes).",
+    "due_at": "2026-12-07T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 5,
+    "description_html": "<p>No AI allowed. In your group of 4, prepare an industry analysis of Commercial Aircraft Manufacturing following the template in the readings, and state and justify your geographic scope. Answer: (1) are there distinct segments, and does the analysis differ by segment?</p><p>(2) which factor most impedes profitability, and why?</p><p>(3) the impact of COVID-19, OR of higher global tariffs. Upload a 2–3 page memo and a 3-slide presentation to Canvas. In class (4:10 PM), some groups will be called on to present for at most 10–12 minutes, and other groups will ask questions. Decide who speaks, and have a no-login share link ready (e.g., a tinyurl).</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/assignments/592909",
+    "canvas_assignment_id": 592909,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122173/assignments/592909"
+      },
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Detailed Outline 'Monday, Dec 7'",
+        "quote": "Groups 1 & 2:           Commercial Aircraft Manufacturing"
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 1.pdf slide 21",
+        "quote": "Large-group numbers only assign topics."
+      },
+      {
+        "type": "announcement",
+        "ref": "Upcoming Homework Assignments (2026-10-30)",
+        "quote": "December 7th before start of your section: Industry Analysis Due"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-12-07T13:30Z = 08:30 EST, matching the syllabus table and slide 21. The outline ('by the start of class') and the announcement ('before start of your section') are overridden. The industry is resolved by slide 21 ('Large-group numbers only assign topics') and the syllabus ('Your group number (corresponding to your group of 8...)'), so Group 1 gets Commercial Aircraft Manufacturing. The AI ban appears in the syllabus AI Policy, the assignment note and slide 21. Canvas calls it 'Session 12'; it is Lecture 11. The Canvas description is empty and there is no group category."
+  },
+  {
+    "id": "state-society-dean-charles-lecture",
+    "course": "state_society",
+    "title": "Dean Charles lecture: 4:10 PM in Zhang Auditorium (all cohorts)",
+    "kind": "admin",
+    "work": "individual",
+    "due_at": "2026-12-08T16:00:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>Meeting 11 is Dean Kerwin Charles&#x27;s guest lecture, Race and Economic Opportunity in the United States, held 4:10-6:00 PM in Zhang Auditorium for all cohorts. Arrive by 4:00 PM so 350+ students can be seated. The usual 10:05 AM Silver class does not meet. Attendance counts toward the participation grade (20%).</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/files/13275886",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), p.7 Brief Outline footnote; Meeting 11 p.19",
+        "quote": "4:10 – 6:00 PM in Zhang Auditorium for all Cohorts"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "This is a schedule change, not a submission. due_local is the 4:00 PM arrival time the syllabus asks for. Memo 4 is due at 11:59 PM the same night. Drop it if the tracker lists deliverables only."
+  },
+  {
+    "id": "state-society-memo-4",
+    "course": "state_society",
+    "title": "Memo 4: Gender Disparities in the Labor Market",
+    "kind": "memo",
+    "work": "individual",
+    "due_at": "2026-12-08T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 20,
+    "description_html": "<p>Individual one-page analytical reflection memo on the Dec 3 class (Gender Discrimination and its Labor Market Consequences). The prompt unlocks on Canvas Fri Dec 4, 5:00 PM EST. Format: at most 650 words on one single-spaced 12-pt page, a context paragraph (about 100-200 words) and then the analysis, in-text citations, works cited on page 2. Submit a Word .doc named Silver_&lt;NetID&gt;_Memo4.doc. Grading is anonymous, so do not put your name in the title or the body. Rubric: connection 8, analysis 8, style 4. No AI-written text.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/assignments/611433",
+    "canvas_assignment_id": 611433,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122176/assignments/611433",
+        "quote": "Memo 4 (10:05 AM Section)"
+      },
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), p.5, Meeting 10 p.18, Appendix A Memo Topics p.26",
+        "quote": "Memo 4. Gender Disparities in the Labor Market (due December 8 by 11:59 PM)"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "Canvas due_at 2026-12-09T04:59:59Z is Tue Dec 8, 11:59 PM EST, which matches the syllabus. Unlocks Dec 4, 5 PM EST; locks Dec 9, 12:05 AM EST. The same day has the 4:10-6:00 PM all-cohort lecture in Zhang. Late submissions are not accepted. The description is empty until the prompt is posted."
+  },
+  {
+    "id": "competitor-prep-antitrust",
+    "course": "competitor",
+    "title": "Prep: antitrust questions (FTC v. Amazon)",
+    "kind": "prep",
+    "work": "individual",
+    "due_at": "2026-12-09T16:10:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>Read the FTC Guide to Antitrust Laws excerpts (assembled by AIAG, posted on Canvas) and skim the 2023 FTC v. Amazon complaint. Prepare answers to: (1) What is antitrust law for? Is substantial market power, or even monopoly, illegal? What separates aggressive competition from unlawful anticompetitive conduct?</p><p>(2) Why do horizontal and vertical mergers raise different concerns, and what benefits could justify them?</p><p>(3) What are the FTC&#x27;s main allegations, and how do Amazon&#x27;s alleged practices relate to the competitive strategies discussed in class?</p><p>(4) Is the FTC&#x27;s case persuasive? What separates Amazon&#x27;s conduct from legitimate efforts to build and sustain competitive advantage? Not turned in.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/files/13263830",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Class Sessions (Dec 9) and Detailed Outline 'Wednesday, Dec 9'",
+        "quote": "Preparation questions posted / do not turn in"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Syllabus: 'Preparation questions posted / do not turn in'. This is the 12th class meeting (the prose lens labeled it Session 13). Not a Canvas assignment. The due time is Silver Section 5's class start (Wed Dec 9, 4:10 PM EST). Canvas numbering puts this between 'Session 12 Industry Analysis Applied' (Dec 7) and 'Session 14' (Dec 14), so it is effectively Session 13. It is the 12th meeting by date count, but the course does not number sessions that way. Syllabus: 'Preparation questions posted / do not turn in' (not marked optional). By syllabus count this is the 12th of 13 class meetings. Canvas numbers sessions differently: 'Session 12' is Industry Analysis Applied (Dec 7) and 'Session 14' is Accounting data (Dec 14), so Canvas would call Dec 9 Session 13. The title avoids a number for that reason."
+  },
+  {
+    "id": "investor-homework-4",
+    "course": "investor",
+    "title": "Homework 4",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Homework group of up to four; one submission per group, same grade for all.",
+    "due_at": "2026-12-09T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 0,
+    "description_html": "<p>Fourth of four pass/fail group homework assignments (together worth 30% of the course grade). The syllabus lists it under Week 6 (Dec 7-10) as the week it is due and does not give its topics. Groups of up to four; no collaboration with other groups. Submit one assignment per group through the Canvas Assignments tab, with a cover page listing every member; all members get the same grade. Students get about a week per assignment. No credit for late homework.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122175/assignments/609746",
+    "canvas_assignment_id": 609746,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122175/assignments/609746",
+        "quote": "due_at_utc 2026-12-10T04:59:59Z"
+      },
+      {
+        "type": "syllabus",
+        "ref": "inv_syllabus.txt, Course Requirements table",
+        "quote": "Homework #4 due: 12/9"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-12-10T04:59:59Z = Wed 12/9, 11:59 PM EST. This matches the syllabus (12/9). The Canvas description is empty."
+  },
+  {
+    "id": "customer-case-5-medicines-co",
+    "course": "customer",
+    "title": "Case Write-Up #5: Medicines Co.",
+    "kind": "case_writeup",
+    "work": "individual",
+    "due_at": "2026-12-10T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 10,
+    "description_html": "<p>Please submit your case write-up for <strong>Medicines Co</strong><strong>. </strong>Please refer to the syllabus for instructions, as well as to the&nbsp;<strong>detailed class outline</strong> section for discussion questions. Case link is posted under <a title=\"Files\" href=\"https://yale.instructure.com/courses/122174/files\" data-course-type=\"navigation\" data-api-endpoint=\"https://yale.instructure.com/api/v1/courses/122174/folders/root\" data-api-returntype=\"Folder\">Files</a>.</p><p>Individual write-up on &#x27;The Medicines Company&#x27; (HBS 9-502-006). Maximum 4 pages, with a heading for each question. Upload it before class. Questions: (1) Assess the value Angiomax creates: objectively, how much is the product worth?</p><p>(2) As Clive Meanwell, what price would you recommend for Angiomax, and why?</p><p>(3) How would you promote adoption of Angiomax?</p><p>(4) Is The Medicines Company&#x27;s business model sustainable? How can a small upstart make money where a larger, established drug developer sees little hope?</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122174/assignments/611391",
+    "canvas_assignment_id": 611391,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122174/assignments/611391",
+        "quote": "Please submit your case write-up for Medicines Co."
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Outline of Class Sessions, Session 12",
+        "quote": "Thu (12/10) Case: The Medicines Company"
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Detailed Class Schedule, Session 12 Discussion Questions (pp.8-9)",
+        "quote": "Assess the value created by Angiomax."
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "The title follows the Canvas assignment name; the structured lens used 'The Medicines Company'. Canvas due_at 2026-12-10T13:30:00Z (8:30 AM EST) matches the syllabus. This is the last of the 5 write-ups. It is optional only if all of #1-#4 were submitted, and required if any earlier one was skipped, because at least 4 must be turned in. The 6-hour declining-grade grace period runs from the end of class; after that the grade is 0."
+  },
+  {
+    "id": "competitor-hw-6-airlines",
+    "course": "competitor",
+    "title": "Homework 6: Airline strategies from accounting data (Allegiant vs. Frontier)",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Small learning team (Silver 1B); group 1 gets Allegiant and Frontier. Two people per airline collect data individually, then the group writes a memo (3 pages plus exhibits). No AI, no analyst reports.",
+    "due_at": "2026-12-14T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 5,
+    "description_html": "<p>A substantial assignment: start early. AI is not allowed, and neither are analyst reports. In the group, two people take Allegiant and two take Frontier. Each person collects operating and financial data individually, from EDGAR, the 10-K, FAA data and similar sources, and does not collect it together with anyone. Then check and reconcile the numbers with your airline partner. As a group, pick a few cost, operational or quality metrics. Build graphs and tables that contrast the two airlines; Tufte is optional reading for presentation. Write a memo of at most 3 pages of text, plus exhibits, on how the airlines differ and how those differences connect to each firm&#x27;s overall strategy. Prepare a 10-minute presentation of your findings in case your group is chosen to present in class.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/assignments/592910",
+    "canvas_assignment_id": 592910,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122173/assignments/592910"
+      },
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Detailed Outline 'Monday, Dec 14'",
+        "quote": "Groups 1 & 2:           Allegiant & Frontier"
+      },
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Class Sessions (Dec 14)",
+        "quote": "This is a substantial assignment. We recommend that you start early."
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 1.pdf slide 21",
+        "quote": "For the airline project, collect data individually before working together."
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Canvas due_at 2026-12-14T13:30Z = 08:30 EST, matching the syllabus table and slide 21. The outline's 'by the start of class' is overridden. The airline pair follows from the syllabus ('the number belonging to your large group of 7 or 8') and slide 21: Group 1 gets Allegiant & Frontier. Slide 21 adds: 'collect data individually before working together'. AI is banned (syllabus AI Policy, assignment note, slide 21). Canvas calls it 'Session 14'; it is Lecture 13. The Canvas description is empty and there is no group category. Canvas due_at is 2026-12-14T13:30Z = 08:30 EST, Mon Dec 14, a single 'Everyone' date. This matches the syllabus table ('Upload on Canvas by 8:30am') and Lecture 1 slide 21 ('8:30 a.m. on Canvas · All sections')."
   },
   {
     "id": "competitor-final-exam",
@@ -139,9 +843,101 @@
     "work": "individual",
     "due_at": "2026-12-17T09:00:00-05:00",
     "due_precision": "datetime",
-    "description_html": "<p>Closed-book written exam covering all course material, 9 a.m. to noon.</p>",
-    "canvas_url": "https://yale.instructure.com/courses/122173",
-    "sources": [{ "type": "syllabus", "ref": "Competitor 2026 syllabus, Exam" }],
-    "cohort_scope": "all"
+    "description_html": "<p>Closed-book written exam on all course material, in blue books: Thursday, Dec 17, 2026, 9:00 AM to noon. Worth 40% of the course grade. No AI and no collaboration. Previous years&#x27; exams will be posted on Canvas for practice.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/files/13263830",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "comp_syllabus.txt, Course Requirements 'Exam' and 'Final Exam'",
+        "quote": "scheduled for Thursday, December 17, 2026, from 9 a.m. to noon"
+      },
+      {
+        "type": "lecture",
+        "ref": "MGT410 Lecture 1.pdf slides 18–19",
+        "quote": "Assignments (40%) Final (40%)"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Ends at 12:00 PM. The location is not stated anywhere. One deck reader had a 2026-12-16 placeholder because the Lecture 1 deck gives no date. The syllabus date (stated twice) replaces it. Blue books and the no-AI/no-collaboration rule come from Lecture 1 slide 19."
+  },
+  {
+    "id": "customer-final-exam",
+    "course": "customer",
+    "title": "Final exam",
+    "kind": "exam",
+    "work": "individual",
+    "due_at": "2026-12-18T09:00:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>In-class final exam, Friday Dec 18, starting at 9:00 AM: short-answer / short-essay questions over 2 hours. Closed book and closed notes, with no cheat sheet. It covers all lectures and case discussions and is worth 40% of the course grade.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122174/files/13262832",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Course Requirements table (p.3)",
+        "quote": "Final Exam Friday, December 18, 9-11am 40%"
+      },
+      {
+        "type": "syllabus",
+        "ref": "cust_syllabus.txt, Outline of Class Sessions (p.5)",
+        "quote": "Final Exam 9:00am-11:00am ... (Closed book, closed note, no cheat sheet)"
+      },
+      {
+        "type": "lecture",
+        "ref": "cust_L1.txt (L1-Introduction_class.pdf, file 13269368), slide '3. Final Exam (40%)'",
+        "quote": "Friday, December 18, 9-12am"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "Re-reading the sources confirms a conflict on the end time. The syllabus says 9-11am in two places (the requirements table and the session outline) and says 'a 2-hour period'. The L1 slide says 'Friday, December 18, 9-12am'. The start time of 9:00 is the same everywhere, so due_local is unaffected. The format is 'short answer' in the syllabus and 'Short essay' in the L1 slides. No room is stated; all sections meet in Evans 4200. The exam is not in the Canvas Assignments tab, and calendar_events.txt is empty. The review session is listed as 'TBA' and is excluded."
+  },
+  {
+    "id": "investor-final-exam",
+    "course": "investor",
+    "title": "Final exam",
+    "kind": "exam",
+    "work": "individual",
+    "due_at": "2026-12-21T09:00:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>In-person final exam, Mon Dec 21, 9:00 AM-12:00 PM. It is 70% of the course grade. Arrive at least 15 minutes early to find your room. Most questions come straight from the lecture notes and homework; harder ones are marked **. Closed book and closed internet: no internet-connected device may be used, and no laptops or tablets. Optional: one letter-size cheat sheet, both sides, handwritten by you on paper (photocopies are OK if the original meets the rules). A calculator that does logs and exponents is required, and a phone or watch cannot be used as one; AASL provides scientific calculators, or bring your own. No AI.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122175/files/13269174",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "inv_syllabus.txt (file 13269174), Course Requirements table and Final Exam section",
+        "quote": "The final exam is at 9:00 a.m. on Monday, December 21st."
+      },
+      {
+        "type": "syllabus",
+        "ref": "syllabus_canvas_tab.txt (Canvas Syllabus tab), Detailed Outline, Week 7",
+        "quote": "12/21: Final Exam"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "The exam is not in the Canvas Assignments tab. It comes from the syllabus PDF (Course Requirements and the 'Final exam practicalities' section), and the Canvas Syllabus tab also lists '12/21: Final Exam'. Dec 21, 2026 is a Monday, consistent with the syllabus. I linked the syllabus PDF (file 13269174) rather than the Canvas Syllabus tab because only the PDF has the exam rules. No source names the room. Handwriting the cheat sheet is required prep before 12/21. These related sessions are optional and not listed as items: the Final Review on 12/16, 4:30-6:00 PM in room 2410, and the Final Office Hour on 12/17, 2:00-5:00 PM in room 4200. The cheat sheet is optional ('You may bring one'); if you want one, it must be handwritten on letter-size paper before 12/21."
+  },
+  {
+    "id": "state-society-final-exam",
+    "course": "state_society",
+    "title": "Final exam",
+    "kind": "exam",
+    "work": "individual",
+    "due_at": "2026-12-22T09:00:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>Final exam, Tuesday Dec 22, 9:00 AM-12:00 PM, worth 40% of the course grade. Multiple short-answer and long-answer essay questions. Taken in a lock-down browser that blocks other websites and software; all AI tools are forbidden. Example questions and past exams will be shared as the date approaches, and a review session will be scheduled later in the term.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/files/13275886",
+    "sources": [
+      {
+        "type": "syllabus",
+        "ref": "State and Society 2026 syllabus v6 (file 13275886), p.5 Final Exam; p.6 AI Policy",
+        "quote": "Date: Tuesday, December 22 from 9 am – 12 pm"
+      },
+      {
+        "type": "announcement",
+        "ref": "State & Society Week 2 Update (2026-10-30), discussion_topics/875208",
+        "quote": "the final, which will be taken using a lock-down browser"
+      }
+    ],
+    "cohort_scope": "all",
+    "notes": "There is no Canvas assignment yet and the location is not stated. It falls on the last day of the Dec 16-22 exam period. Check the lock-down browser install before the exam. The review session is not tracked as an item."
   }
 ]
