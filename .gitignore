@@ -30,3 +30,6 @@ dist-ssr
 
 # per-machine
 .env.local
+
+# written by the dev server on every done-toggle; force-add it if you want your progress versioned
+data/progress.json
