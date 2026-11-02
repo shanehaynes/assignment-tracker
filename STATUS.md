@@ -13,6 +13,8 @@ _Updated 2026-11-02 by the day-0 session._
 
 ## Pending for Shane
 
+- [ ] Push `main` to GitHub: `git push -u origin main` from the primary checkout (the session could not publish).
+
 - [ ] The GitHub repository is **public**; `data/assignments.json` carries Canvas descriptions. `gh repo edit shanehaynes/assignment-tracker --visibility private --accept-visibility-change-consequences` makes it private.
 - [ ] Apply merge settings (squash only, branches up to date, auto-delete, required check `check`) — checklist in docs/decisions/2026-11-02-merge-settings.md.
 
@@ -26,6 +28,9 @@ _Updated 2026-11-02 by the day-0 session._
 - Not tracked on purpose: readings without a deliverable, office hours, review sessions, optional practice problems, the Lecture 1 prep that has already passed.
 
 ## Known gaps
+
+- Two browser tabs on the dev server overwrite each other's done-marks (last writer wins); see the roadmap's Phase 4.
+- Memo 2-4 and Investor homework descriptions are empty on Canvas until their prompts unlock; re-run the extraction after Nov 11, Nov 18, Dec 4.
 
 - Bash guard not mechanized; the look-before-discarding rules are prose in CLAUDE.md.
 - No browser e2e; the gate is typecheck + unit/acceptance tests + lint + format.

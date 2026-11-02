@@ -10,7 +10,7 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 - Exit: `data/assignments.json` with provenance for every item; a written list of anything uncertain.
 - Result: 31 items. Each was extracted by two independent lenses (plus vision readers for image-only decks), reconciled per course, and checked by two skeptical verifiers; a completeness critic ran per course. Open questions live in each item's `notes` and in STATUS.md.
 
-## Phase 1: Tracker MVP (in progress 2026-11-02)
+## Phase 1: Tracker MVP (done 2026-11-02)
 
 - Block list of deliverables ordered by due date, grouped by day.
 - Filters: course (multi-select), date window (today, this week, next two weeks, all, past due), kind, hide-done.
@@ -20,6 +20,7 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 - Progress persists to `data/progress.json` through the dev server; falls back to `localStorage`.
 - Gate: typecheck, data-validation test, component tests, lint, format check. CI runs it.
 - Exit: Shane can open `npm run dev`, see every item, check one off, restart, and see it still checked.
+- Result: built in one lane to docs/ui-contract.md while a second lane wrote 51 acceptance tests from the contract alone; the fold passed on first contact. A four-lens review (correctness, accessibility, design, test integrity) with two skeptics per finding confirmed 17 items, all applied; 114 tests in the gate.
 
 ## Phase 2: Refresh script
 
@@ -39,6 +40,7 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 - Week view.
 - Keyboard shortcuts for done and navigation.
 - Per-course weighting in the progress strip (points instead of counts).
+- Multi-tab safety for `data/progress.json` (ETag / If-Match on the dev-server endpoint) if two windows are ever open at once; today the last writer wins.
 
 ## Non-goals
 
