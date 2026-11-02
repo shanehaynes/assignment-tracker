@@ -16,7 +16,7 @@ Shane asked for a tracker of every Fall-2 deliverable scraped from Canvas, with 
 ## Implications
 
 - Full new-project path, trimmed: gate, CI, CLAUDE.md, STATUS.md, vendored parallel-agents, decision log. No deploy target, no secrets.
-- The data file is committed. Because the repo at github.com/shanehaynes/assignment-tracker is public, course content in `data/assignments.json` is public too. Recommendation recorded in STATUS.md: make the repository private.
+- The data file is committed. Because the repo at github.com/shanehaynes/assignment-tracker is public, course content in `data/assignments.json` is public too. Shane decided on 2026-11-02 to keep it public.
 
 ## Revisit when
 
