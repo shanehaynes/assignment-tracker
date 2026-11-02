@@ -4,12 +4,12 @@ _Updated 2026-11-02 by the day-0 session._
 
 ## Workstreams
 
-| Workstream                  | Branch / claim                                     | State       | Next step                                           |
-| --------------------------- | -------------------------------------------------- | ----------- | --------------------------------------------------- |
-| Day-0 setup                 | main                                               | done        | —                                                   |
-| Fall-2 extraction (Phase 0) | data/fall2-extraction | done | re-run when Canvas changes (memo prompts unlock Nov 11, Nov 18, Dec 4; Investor homework handouts) |
-| Tracker UI (Phase 1)        | feat/tracker-ui                                    | not started | build to docs/ui-contract.md                        |
-| Acceptance tests (Phase 1)  | verify/tracker-acceptance                          | not started | write from the contract only                        |
+| Workstream                  | Branch / claim            | State       | Next step                                                                                          |
+| --------------------------- | ------------------------- | ----------- | -------------------------------------------------------------------------------------------------- |
+| Day-0 setup                 | main                      | done        | —                                                                                                  |
+| Fall-2 extraction (Phase 0) | data/fall2-extraction     | done        | re-run when Canvas changes (memo prompts unlock Nov 11, Nov 18, Dec 4; Investor homework handouts) |
+| Tracker UI (Phase 1)        | feat/tracker-ui           | not started | build to docs/ui-contract.md                                                                       |
+| Acceptance tests (Phase 1)  | verify/tracker-acceptance | not started | write from the contract only                                                                       |
 
 ## Pending for Shane
 
@@ -17,6 +17,7 @@ _Updated 2026-11-02 by the day-0 session._
 - [ ] Apply merge settings (squash only, branches up to date, auto-delete, required check `check`) — checklist in docs/decisions/2026-11-02-merge-settings.md.
 
 ## Open questions from the extraction (confirm with the TAs or on Canvas)
+
 - Competitor: Shane is in no 'Small Group of 4' Canvas group (category 13034), which Homework 1 (Nov 4) submits through; his 'Silver 1B' sits in the free-form 'Student Group' tab.
 - Investor: the homework assignments use the 'Homework Group N' set; Shane's 'Silver 1A' is in a different set. The TAs asked everyone to join a Homework Group by end of day Nov 4.
 - State & Society: Learning Team 1 is inferred from the MGT 401 group 'Team 1'. If right, the Amazon HQ2 debate is Nov 5 with the speaker/slide email due Nov 4, 5 PM; if wrong, the debate is Nov 12, Dec 10 or Dec 15.
