@@ -44,6 +44,41 @@ describe('milestone labels', () => {
     )
   })
 
+  it('gives label slots to longer ranges first, so a month-long recess beats a 4-day break', () => {
+    // data/semester.json's milestones on a 327px phone track; priority is the range in days.
+    const items: TickLabelInput[] = [
+      { key: 'start', x: 0, texts: ['Oct 26'], pin: 'start', reserved: true },
+      {
+        key: 'end',
+        x: 327,
+        texts: ['Spring break, Mar 8', 'Spring break'],
+        pin: 'end',
+        reserved: true,
+      },
+      { key: 'nov', x: 68.9, texts: shortenings('November recess'), priority: 4 },
+      { key: 'classes-end', x: 123, texts: shortenings('Fall-2 classes end'), priority: 0 },
+      { key: 'finals', x: 125.5, texts: shortenings('Final exam period'), priority: 6 },
+      { key: 'winter', x: 142.7, texts: shortenings('Winter recess'), priority: 26 },
+      { key: 'spring', x: 209, texts: shortenings('Spring-1 classes begin'), priority: 0 },
+      { key: 'spring-end', x: 312.3, texts: shortenings('Spring-1 classes end'), priority: 0 },
+      {
+        key: 'spring-finals',
+        x: 314.7,
+        texts: shortenings('Spring-1 final exam period'),
+        priority: 2,
+      },
+    ]
+    const text = (placed: ReturnType<typeof layoutTickLabels>, key: string) =>
+      placed.find((p) => p.key === key)?.text
+    expect(text(layoutTickLabels(items, 327), 'winter')).toBe('Winter recess')
+    // Without priorities the earlier, shorter break takes the slot.
+    const flat = items.map((i) => ({ ...i, priority: undefined }))
+    expect(text(layoutTickLabels(flat, 327), 'winter')).toBeNull()
+    // A little wider, the finals period wins a slot too.
+    const wider = items.map((i) => ({ ...i, x: (i.x / 327) * 414 }))
+    expect(text(layoutTickLabels(wider, 414), 'finals')).toBe('Final exam period')
+  })
+
   it('drops a label that cannot fit anywhere but still returns its slot', () => {
     const placed = layoutTickLabels(
       [

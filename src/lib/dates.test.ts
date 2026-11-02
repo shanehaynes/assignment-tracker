@@ -7,6 +7,7 @@ import {
   formatDue,
   formatDueClock,
   formatLongDate,
+  formatMonthDayRange,
   formatRelativeDue,
   startOfDay,
   weekdayOf,
@@ -70,5 +71,14 @@ describe('formatting', () => {
     expect(formatRelativeDue('2026-11-07', '2026-11-02')).toBe('Due in 5 days')
     expect(formatRelativeDue('2026-10-31', '2026-11-02')).toBe('Due 2 days ago')
     expect(formatRelativeDue('2026-11-02', '2026-11-02')).toBe('Due today')
+  })
+})
+
+describe('milestone dates', () => {
+  it('formats a day, a range within a month, and a range across months', () => {
+    expect(formatMonthDayRange('2026-12-15')).toBe('Dec 15')
+    expect(formatMonthDayRange('2026-12-15', '2026-12-15')).toBe('Dec 15')
+    expect(formatMonthDayRange('2026-11-23', '2026-11-27')).toBe('Nov 23–27')
+    expect(formatMonthDayRange('2026-12-23', '2027-01-18')).toBe('Dec 23–Jan 18')
   })
 })

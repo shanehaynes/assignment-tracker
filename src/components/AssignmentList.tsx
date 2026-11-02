@@ -29,7 +29,7 @@ export default function AssignmentList({
 }: Props) {
   const groups = groupByDay(items)
   return (
-    <section aria-label="Assignments" className="list" ref={listRef}>
+    <section aria-label="Assignments" className="list" ref={listRef} tabIndex={-1}>
       {groups.length === 0 ? (
         <p className="empty">Nothing due</p>
       ) : (

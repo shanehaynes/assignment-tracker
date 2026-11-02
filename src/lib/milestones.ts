@@ -11,6 +11,8 @@ export type TickLabelInput = {
   pin?: 'start' | 'end'
   /** Placed before everything else. */
   reserved?: boolean
+  /** Among unreserved labels, higher goes first (e.g. a ranged milestone's length in days). */
+  priority?: number
 }
 
 export type PlacedLabel = {
@@ -56,7 +58,7 @@ export function layoutTickLabels(
   const order = [...items.keys()].sort((i, j) => {
     const ri = items[i].reserved ? 0 : 1
     const rj = items[j].reserved ? 0 : 1
-    return ri - rj || items[i].x - items[j].x
+    return ri - rj || (items[j].priority ?? 0) - (items[i].priority ?? 0) || items[i].x - items[j].x
   })
 
   const placed = new Map<number, PlacedLabel>()

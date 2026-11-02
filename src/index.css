@@ -8,7 +8,7 @@
   --raised: #efebe3;
   --ink: #1f1c18;
   --muted: #5c564d;
-  --faint: #726a5f;
+  --faint: #6f675c;
   --hairline: #ddd7cc;
   --rule: #c9c2b5;
   --track: #e3ded5;
@@ -317,6 +317,21 @@ select {
 .tick-label[data-lane='1'] {
   top: 16px;
 }
+.milestones {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--muted);
+}
+.milestones summary {
+  width: max-content;
+  cursor: pointer;
+}
+.milestones ol {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
 .save-note {
   margin-top: 6px;
   font-size: 12px;
@@ -324,7 +339,7 @@ select {
   text-align: right;
 }
 .save-note:empty {
-  display: none;
+  margin: 0;
 }
 .motto {
   margin-top: 18px;
@@ -490,7 +505,8 @@ select {
   white-space: nowrap;
 }
 .undo-line:empty {
-  display: none;
+  padding: 0;
+  border: 0;
 }
 
 /* List */
@@ -518,7 +534,7 @@ select {
 .row {
   position: relative;
   display: grid;
-  grid-template-columns: 68px minmax(0, 1fr) auto 44px;
+  grid-template-columns: 68px minmax(0, 1fr) 10em 44px;
   grid-template-areas:
     '. course course done'
     'when title meta done';
@@ -537,6 +553,12 @@ select {
 }
 .row.is-selected {
   background: var(--raised);
+}
+/* A non-colour cue too, so the selection survives forced colours. */
+.row.is-selected .row-title {
+  text-decoration: underline 2px;
+  text-decoration-color: var(--ink);
+  text-underline-offset: 3px;
 }
 
 .row-when {
@@ -620,9 +642,11 @@ select {
 .row-meta {
   grid-area: meta;
   align-self: start;
-  display: flex;
+  display: grid;
+  grid-template-columns: 6em 3.6em;
+  column-gap: 10px;
+  justify-items: start;
   align-items: center;
-  gap: 10px;
   min-height: 21px;
   font-size: 13px;
   white-space: nowrap;
@@ -641,6 +665,8 @@ select {
   color: var(--ink);
 }
 .points {
+  grid-column: 2;
+  justify-self: end;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
@@ -662,6 +688,9 @@ select {
   color: var(--faint);
   text-decoration: line-through;
   text-decoration-color: var(--faint);
+}
+.row.is-done.is-selected .row-title {
+  text-decoration-line: line-through underline;
 }
 .row.is-done .row-course,
 .row.is-done .row-when,
@@ -897,6 +926,13 @@ a.source-ref:hover {
   }
   .box::before {
     border-color: HighlightText;
+  }
+  .chip-face .tint-dot {
+    forced-color-adjust: none;
+    border-color: CanvasText;
+  }
+  .chip-input:checked + .chip-face .tint-dot {
+    background: CanvasText;
   }
 }
 

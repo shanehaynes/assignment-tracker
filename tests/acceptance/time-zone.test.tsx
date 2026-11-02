@@ -7,7 +7,7 @@
 //   and host grouping would put it under the same day as nextWeek, Mon Nov 9 8:30 AM Eastern)
 
 import { cleanup, screen, within } from '@testing-library/react'
-import { afterEach, beforeEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { ids, laterToday, nextWeek, overdue, thisWeek, weekEdgeDateOnly } from './fixtures.ts'
 import {
   itemEl,
@@ -20,8 +20,14 @@ import {
 } from './harness.ts'
 
 type Env = Record<string, string | undefined>
-const env = (globalThis as unknown as { process: { env: Env } }).process.env
-const hostTz = env.TZ
+// Hoisted above the imports, so the host zone is London before any app module loads
+// (a formatter cached at module load would otherwise keep the real host zone).
+const { env, hostTz } = vi.hoisted(() => {
+  const env = (globalThis as unknown as { process: { env: Env } }).process.env
+  const hostTz = env.TZ
+  env.TZ = 'Europe/London'
+  return { env, hostTz }
+})
 
 beforeEach(() => {
   env.TZ = 'Europe/London'

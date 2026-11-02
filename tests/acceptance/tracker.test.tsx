@@ -191,13 +191,12 @@ describe('assignment list', () => {
 
     // date: no time of day.
     const dateOnly = timeText(weekEdgeDateOnly)
-    expect(dateOnly.startsWith('Sun, Nov 8')).toBe(true)
+    expect(dateOnly).toBe('Sun, Nov 8')
     expect(dateOnly).not.toMatch(/\d:\d\d|\b[AP]M\b/)
 
     // approx: the moment followed by "(approx.)".
     const approx = timeText(marchApprox)
-    expect(approx.startsWith('Wed, Mar 3')).toBe(true)
-    expect(approx.endsWith('(approx.)')).toBe(true)
+    expect(approx).toBe('Wed, Mar 3 · 10:05 AM (approx.)')
   })
 
   it('marks only past-due, undone items Overdue', async () => {
@@ -329,6 +328,14 @@ describe('window filter', () => {
     // "Past due" compares with now, not with midnight today.
     await user.selectOptions(windowSelect(), 'past')
     expect(visibleIds()).toEqual(ids(overdue, laterToday, thisWeek))
+
+    // "This week" and "Next two weeks" start at midnight today, so they keep it too.
+    await user.selectOptions(windowSelect(), 'week')
+    expect(visibleIds()).toEqual(ids(thisWeek, weekEdgeDateOnly))
+    await user.selectOptions(windowSelect(), 'fortnight')
+    expect(visibleIds()).toEqual(
+      ids(thisWeek, weekEdgeDateOnly, nextWeek, fortnightEdge, pastFortnight),
+    )
   })
 })
 
@@ -379,7 +386,7 @@ describe('hide done', () => {
 
 describe('filters compose', () => {
   it('applies course, window, kind and hide-done together', async () => {
-    const { user } = await renderTracker()
+    const { store, user } = await renderTracker()
     await user.click(courseBox('Customer'))
     await user.selectOptions(windowSelect(), 'fortnight')
     await user.selectOptions(kindSelect(), 'homework')
@@ -390,6 +397,7 @@ describe('filters compose', () => {
 
     await user.selectOptions(windowSelect(), 'past')
     expect(visibleIds()).toEqual(ids(overdue))
+    expect(store.load).toHaveBeenCalledTimes(1)
   })
 
   it('shows "Nothing due" when the filters exclude everything', async () => {
@@ -453,7 +461,17 @@ describe('done toggle', () => {
     expect(screen.getByTestId('progress-work')).toHaveTextContent(workText(0, 10))
     const saved = store.save.mock.lastCall?.[0]
     expect(saved).toBeDefined()
-    expect(saved?.[doneInitially.id]?.done).not.toBe(true)
+    expect(saved).not.toHaveProperty(doneInitially.id)
+  })
+
+  it('updates the list and the count immediately, without waiting for the save', async () => {
+    const store = createTestStore()
+    store.save.mockImplementation(() => new Promise<void>(() => {}))
+    const { user } = await renderTracker({ store })
+    await user.click(doneBox(laterToday))
+    expect(visibleIds()).not.toContain(laterToday.id)
+    expect(screen.getByTestId('progress-work')).toHaveTextContent(workText(2, 10))
+    expect(store.save).toHaveBeenCalledTimes(1)
   })
 
   it('counts done work across every assignment regardless of filters', async () => {
@@ -543,10 +561,11 @@ describe('detail panel', () => {
   })
 
   it('closes with the Close button', async () => {
-    const { user } = await renderTracker()
+    const { store, user } = await renderTracker()
     await user.click(within(itemEl(thisWeek)).getByRole('button', { name: thisWeek.title }))
     await user.click(within(getDetail()).getByRole('button', { name: 'Close' }))
     expect(queryDetail()).toBeNull()
+    expect(store.load).toHaveBeenCalledTimes(1)
   })
 
   it('closes with Escape', async () => {

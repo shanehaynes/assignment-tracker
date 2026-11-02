@@ -17,7 +17,8 @@ export type AppProps = {
   store?: ProgressStore
 }
 
-type FocusRequest = { kind: 'done' | 'title'; id: string } | { kind: 'undo' } | null
+type FocusRequest =
+  { kind: 'done' | 'title'; id: string } | { kind: 'undo' } | { kind: 'list' } | null
 
 const CLOCK_TICK_MS = 60_000
 
@@ -64,6 +65,7 @@ export default function App({
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [lastDone, setLastDone] = useState<{ id: string; title: string } | null>(null)
+  const [undoArmedAt, setUndoArmedAt] = useState(0)
 
   const detailId = useId()
   const listRef = useRef<HTMLElement>(null)
@@ -144,11 +146,11 @@ export default function App({
           const neighbour = visible[i + 1] ?? visible[i - 1]
           focusRequest.current = neighbour ? { kind: 'done', id: neighbour.id } : { kind: 'undo' }
         }
-      } else if (lastDone?.id === id) {
+      } else {
         setLastDone(null)
       }
     },
-    [assignments, filters.hideDone, fixedNow, lastDone, persist, visible],
+    [assignments, filters.hideDone, fixedNow, persist, visible],
   )
 
   const undo = useCallback(() => {
@@ -164,28 +166,45 @@ export default function App({
     setSelectedId(null)
   }, [selectedId])
 
+  const changeFilters = useCallback((next: FilterState) => {
+    setLastDone(null)
+    setFilters(next)
+  }, [])
+
+  // Escape closes the panel and dismisses the "Marked done" note.
   useEffect(() => {
-    if (!selectedId) return
+    if (!selectedId && !lastDone) return
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !e.defaultPrevented) close()
+      if (e.key !== 'Escape' || e.defaultPrevented) return
+      if (lastDone) {
+        if (undoRef.current && document.activeElement === undoRef.current)
+          focusRequest.current = { kind: 'list' }
+        setLastDone(null)
+      }
+      if (selectedId) close()
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
-  }, [selectedId, close])
+  }, [selectedId, lastDone, close])
 
-  // The "Marked done" note fades out on its own after a while.
+  // The "Marked done" note fades out on its own after a while, but never while Undo has focus;
+  // leaving the Undo button re-arms the timer.
   useEffect(() => {
     if (!lastDone) return
-    const timer = setTimeout(() => setLastDone(null), 12_000)
+    const timer = setTimeout(() => {
+      if (undoRef.current && document.activeElement === undoRef.current) return
+      setLastDone(null)
+    }, 12_000)
     return () => clearTimeout(timer)
-  }, [lastDone])
+  }, [lastDone, undoArmedAt])
 
   useEffect(() => {
     const request = focusRequest.current
     if (!request) return
     focusRequest.current = null
-    if (request.kind === 'undo') {
-      undoRef.current?.focus()
+    if (request.kind === 'undo' || request.kind === 'list') {
+      const target = request.kind === 'undo' ? undoRef.current : null
+      ;(target ?? listRef.current)?.focus()
       return
     }
     const row = [
@@ -194,7 +213,8 @@ export default function App({
     const target = row?.querySelector<HTMLElement>(
       request.kind === 'done' ? 'input[type="checkbox"]' : 'button.row-title',
     )
-    target?.focus()
+    // The row may be gone (filtered out, or hidden once done): land on the list, not on <body>.
+    ;(target ?? listRef.current)?.focus()
   })
 
   return (
@@ -220,8 +240,8 @@ export default function App({
           />
           <Filters
             value={filters}
-            onChange={setFilters}
-            onReset={() => setFilters(DEFAULT_FILTERS)}
+            onChange={changeFilters}
+            onReset={() => changeFilters(DEFAULT_FILTERS)}
             shown={visible.length}
             total={assignments.length}
           />
@@ -229,7 +249,13 @@ export default function App({
             {lastDone ? (
               <>
                 <span className="undo-text">Marked “{lastDone.title}” done.</span>
-                <button type="button" className="text-button" ref={undoRef} onClick={undo}>
+                <button
+                  type="button"
+                  className="text-button"
+                  ref={undoRef}
+                  onClick={undo}
+                  onBlur={() => setUndoArmedAt(Date.now())}
+                >
                   Undo
                 </button>
               </>
@@ -243,7 +269,7 @@ export default function App({
             selectedId={selected?.id ?? null}
             detailId={detailId}
             listRef={listRef}
-            onOpen={setSelectedId}
+            onOpen={(id) => (id === selectedId ? close() : setSelectedId(id))}
             onToggle={toggle}
           />
         </div>

@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import App from './App.tsx'
 import { ASSIGNMENTS } from './data.ts'
-import { createMemoryStore, type ProgressStore } from './progress.ts'
+import { createMemoryStore, STORAGE_KEY, type ProgressStore } from './progress.ts'
 import type { Assignment, Progress, Semester } from './types.ts'
 
 afterEach(cleanup)
@@ -97,12 +97,31 @@ const rowIds = () =>
 const row = (id: string) => list().querySelector<HTMLElement>(`li[data-assignment-id="${id}"]`)!
 
 describe('App defaults', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals()
+    localStorage.clear()
+  })
+
   it('renders the committed data with no props, falling back to localStorage for progress', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockRejectedValue(new TypeError('offline')))
+    const [first, second] = ASSIGNMENTS
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ [first.id]: { done: true, at: '2026-11-01T12:00:00.000Z' } }),
+    )
+    const user = userEvent.setup()
     render(<App />)
     expect(screen.getByRole('heading', { level: 1, name: 'Assignments' })).toBeInTheDocument()
-    expect(screen.getByTestId('progress-work')).toHaveTextContent(`0 of ${ASSIGNMENTS.length} done`)
-    await act(async () => {})
-    expect(screen.getByRole('region', { name: 'Assignments' })).toBeInTheDocument()
+    await waitFor(() =>
+      expect(screen.getByTestId('progress-work')).toHaveTextContent(
+        `1 of ${ASSIGNMENTS.length} done`,
+      ),
+    )
+    await user.click(screen.getByRole('checkbox', { name: 'Hide done' }))
+    expect(within(row(first.id)).getByRole('checkbox')).toBeChecked()
+
+    await user.click(within(row(second.id)).getByRole('checkbox'))
+    expect(JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '{}')).toHaveProperty([second.id])
   })
 })
 
@@ -206,6 +225,76 @@ describe('App contract', () => {
 
     await user.click(within(form).getByRole('button', { name: 'Reset filters' }))
     expect(rowIds()).toEqual(['case-1', 'memo-1', 'hw-1', 'exam'])
+    expect(within(form).getByRole('checkbox', { name: 'Customer' })).toHaveFocus()
+  })
+
+  it('keeps the panel open when its item is filtered out, and closing it lands focus on the list', async () => {
+    const { user } = setup()
+    await user.click(screen.getByRole('button', { name: 'Case One' }))
+    const form = screen.getByRole('form', { name: 'Filters' })
+    await user.click(within(form).getByRole('checkbox', { name: 'Customer' }))
+    expect(rowIds()).not.toContain('case-1')
+    const aside = screen.getByRole('complementary', { name: 'Assignment detail' })
+    await user.click(within(aside).getByRole('button', { name: 'Close' }))
+    expect(screen.queryByRole('complementary', { name: 'Assignment detail' })).toBeNull()
+    expect(list()).toHaveFocus()
+  })
+
+  it('closes the panel when the open title is pressed again', async () => {
+    const { user } = setup()
+    const trigger = screen.getByRole('button', { name: 'Case One' })
+    await user.click(trigger)
+    expect(trigger).toHaveAttribute('aria-expanded', 'true')
+    await user.click(trigger)
+    expect(screen.queryByRole('complementary', { name: 'Assignment detail' })).toBeNull()
+    expect(trigger).toHaveAttribute('aria-expanded', 'false')
+    expect(trigger).toHaveFocus()
+  })
+
+  it('keeps the Undo note while Undo has focus, and clears it on a filter change or Escape', async () => {
+    vi.useFakeTimers()
+    try {
+      setup()
+      await act(async () => {})
+      const undoButton = () => screen.queryByRole('button', { name: 'Undo' })
+
+      fireEvent.click(screen.getByRole('checkbox', { name: 'Done: Case One' }))
+      act(() => undoButton()!.focus())
+      act(() => vi.advanceTimersByTime(30_000))
+      expect(undoButton()).toHaveFocus()
+      act(() => undoButton()!.blur())
+      act(() => vi.advanceTimersByTime(12_000))
+      expect(undoButton()).toBeNull()
+
+      fireEvent.click(screen.getByRole('checkbox', { name: 'Done: Memo One' }))
+      expect(undoButton()).not.toBeNull()
+      fireEvent.change(screen.getByRole('combobox', { name: 'Window' }), {
+        target: { value: 'week' },
+      })
+      expect(undoButton()).toBeNull()
+
+      fireEvent.click(screen.getByRole('checkbox', { name: 'Done: Homework One' }))
+      act(() => undoButton()!.focus())
+      fireEvent.keyDown(undoButton()!, { key: 'Escape' })
+      expect(undoButton()).toBeNull()
+      expect(list()).toHaveFocus()
+    } finally {
+      vi.useRealTimers()
+    }
+  })
+
+  it('lists every milestone once, in a Milestones disclosure under the term meter', () => {
+    setup()
+    const progress = screen.getByRole('region', { name: 'Progress' })
+    const details = progress.querySelector('details.milestones')
+    expect(details?.querySelector('summary')).toHaveTextContent('Milestones')
+    expect([...(details?.querySelectorAll('li') ?? [])].map((li) => li.textContent)).toEqual([
+      'Nov 23–27: November recess',
+    ])
+    const ticks = progress.querySelector('ol.ticks')
+    expect(ticks).toHaveAttribute('aria-hidden', 'true')
+    expect(ticks?.textContent).toBe('')
+    expect(ticks?.querySelector('[title]')).toBeNull()
   })
 
   it('opens the detail panel, sanitizes, links out, and closes with Escape', async () => {

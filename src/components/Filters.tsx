@@ -88,7 +88,15 @@ export default function Filters({ value, onChange, onReset, shown, total }: Prop
         </label>
 
         {isDefaultFilters(value) ? null : (
-          <button type="button" className="text-button" onClick={onReset}>
+          <button
+            type="button"
+            className="text-button"
+            onClick={(e) => {
+              // This button unmounts once the filters are back to default; keep focus in the form.
+              e.currentTarget.form?.querySelector<HTMLInputElement>('input')?.focus()
+              onReset()
+            }}
+          >
             Reset filters
           </button>
         )}

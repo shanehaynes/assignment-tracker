@@ -135,6 +135,13 @@ export function formatMonthDay(key: string): string {
   return `${MONTH_SHORT[m - 1]} ${d}`
 }
 
+/** "Nov 23–27", "Dec 23–Jan 18", or "Dec 15" when there is no end (or it is the same day). */
+export function formatMonthDayRange(from: string, to?: string): string {
+  if (!to || to === from) return formatMonthDay(from)
+  const same = from.slice(0, 7) === to.slice(0, 7)
+  return `${formatMonthDay(from)}–${same ? String(parseKey(to).d) : formatMonthDay(to)}`
+}
+
 /** "Tuesday, November 3" */
 export function formatLongDate(key: string): string {
   const { m, d } = parseKey(key)

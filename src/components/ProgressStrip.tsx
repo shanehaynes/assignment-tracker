@@ -1,6 +1,6 @@
 import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { Semester } from '../types.ts'
-import { formatMonthDay, startOfDay } from '../lib/dates.ts'
+import { daysBetween, formatMonthDay, formatMonthDayRange, startOfDay } from '../lib/dates.ts'
 import { layoutTickLabels, shortenings, type TickLabelInput } from '../lib/milestones.ts'
 import { termFraction, termPercent } from '../lib/progress.ts'
 
@@ -50,11 +50,9 @@ export default function ProgressStrip({ semester, now, done, total, saveFailed }
     () =>
       semester.milestones.map((m) => {
         const at = termFraction(startOfDay(m.date).getTime(), semester)
-        const when =
-          m.end && m.end !== m.date
-            ? `${formatMonthDay(m.date)} – ${formatMonthDay(m.end)}`
-            : formatMonthDay(m.date)
-        return { key: `${m.date}-${m.label}`, at, label: m.label, when }
+        const when = formatMonthDayRange(m.date, m.end)
+        const priority = m.end ? daysBetween(m.date, m.end) : 0
+        return { key: `${m.date}-${m.label}`, at, label: m.label, when, priority }
       }),
     [semester],
   )
@@ -72,7 +70,12 @@ export default function ProgressStrip({ semester, now, done, total, saveFailed }
         pin: 'end',
         reserved: true,
       },
-      ...ticks.map((t) => ({ key: t.key, x: t.at * trackWidth, texts: shortenings(t.label) })),
+      ...ticks.map((t) => ({
+        key: t.key,
+        x: t.at * trackWidth,
+        texts: shortenings(t.label),
+        priority: t.priority,
+      })),
     ]
     const placed = layoutTickLabels(inputs, trackWidth)
     return new Map(placed.map((p) => [p.key, p]))
@@ -102,7 +105,7 @@ export default function ProgressStrip({ semester, now, done, total, saveFailed }
             <span className="meter-fill" style={{ width: `${todayAt * 100}%` }} />
           </div>
           <span className="today-tick" aria-hidden="true" style={{ left: `${todayAt * 100}%` }} />
-          <ol className="ticks" ref={ticksRef} aria-label="Milestones">
+          <ol className="ticks" ref={ticksRef} aria-hidden="true">
             {ticks.map((t) => {
               const placed = labels.get(t.key)
               const lane = placed?.text ? placed.lane : -1
@@ -112,10 +115,7 @@ export default function ProgressStrip({ semester, now, done, total, saveFailed }
                   className="tick"
                   data-lane={lane}
                   style={{ left: `${t.at * 100}%` }}
-                  title={`${t.when}: ${t.label}`}
-                >
-                  <span className="sr-only">{`${t.when}: ${t.label}`}</span>
-                </li>
+                />
               )
             })}
           </ol>
@@ -126,13 +126,25 @@ export default function ProgressStrip({ semester, now, done, total, saveFailed }
                   key={p.key}
                   className="tick-label"
                   data-lane={p.lane}
-                  style={{ left: `${(p.left / trackWidth) * 100}%` }}
+                  style={
+                    p.key === 'end' ? { right: 0 } : { left: `${(p.left / trackWidth) * 100}%` }
+                  }
                 >
                   {p.text}
                 </span>
               ) : null,
             )}
           </div>
+          {ticks.length > 0 ? (
+            <details className="milestones">
+              <summary>Milestones</summary>
+              <ol>
+                {ticks.map((t) => (
+                  <li key={t.key}>{`${t.when}: ${t.label}`}</li>
+                ))}
+              </ol>
+            </details>
+          ) : null}
         </div>
         <span className="meter-value" data-testid="progress-time">
           {pct}% of the term
