@@ -1,0 +1,147 @@
+[
+  {
+    "id": "customer-case-1-black-decker",
+    "course": "customer",
+    "title": "Case Write-Up #1: Black & Decker",
+    "kind": "case_writeup",
+    "work": "individual",
+    "due_at": "2026-11-03T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 10,
+    "description_html": "<p>Submit your case write-up for Black &amp; Decker before class. Discussion questions: (1) Why is Black and Decker doing poorly in the tradesman segment? (2) How does the buying behavior of the tradesman impact the situation? (3) What can be the key resource that could help Black and Decker in the tradesman segment? Does Black and Decker have them? (4) Which action alternative should B&amp;D pursue?</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122174/assignments/611387",
+    "canvas_assignment_id": 611387,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122174/assignments/611387"
+      },
+      {
+        "type": "syllabus",
+        "ref": "MGT 411 Customer 2026 Syllabus, Session 3 discussion questions"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "Seed item; replaced by the extraction run."
+  },
+  {
+    "id": "state-society-memo-1-theory-of-regulation",
+    "course": "state_society",
+    "title": "Memo 1: Theory of Regulation",
+    "kind": "memo",
+    "work": "individual",
+    "due_at": "2026-11-03T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 20,
+    "description_html": "<p>One-page analytical reflection memo (max 650 words) on the free-rider problem and a proposed regulation. Submit under the 10:05 AM (Silver cohort) section only.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122176/assignments/611284",
+    "canvas_assignment_id": 611284,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122176/assignments/611284"
+      }
+    ],
+    "cohort_scope": "silver"
+  },
+  {
+    "id": "competitor-session-3-cournot-homework",
+    "course": "competitor",
+    "title": "Session 3 homework: Cournot and first-mover advantage",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Small learning team of 4 (Silver 1B); one submission per group.",
+    "due_at": "2026-11-04T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 5,
+    "description_html": "<p>Submit responses in the Canvas text box; mark the final answer for each question.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173/assignments/592911",
+    "canvas_assignment_id": 592911,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122173/assignments/592911"
+      }
+    ],
+    "cohort_scope": "silver",
+    "notes": "Canvas enforces 8:30 AM; the syllabus says before your section."
+  },
+  {
+    "id": "investor-join-homework-group",
+    "course": "investor",
+    "title": "Join a Canvas homework group",
+    "kind": "admin",
+    "work": "individual",
+    "due_at": "2026-11-04T23:59:00-05:00",
+    "due_precision": "date",
+    "description_html": "<p>People tab → Homework Groups → join a group of up to four. Homework grades depend on the group.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122175/groups",
+    "sources": [{ "type": "announcement", "ref": "Week 2 Announcement (2026-11-01)" }],
+    "cohort_scope": "all"
+  },
+  {
+    "id": "state-society-debate-amazon-hq2",
+    "course": "state_society",
+    "title": "Learning Team Debate: Amazon HQ2 (LT 1 vs 2)",
+    "kind": "debate",
+    "work": "group",
+    "group_note": "Learning Team 1; two speakers; slides (PowerPoint) and speaker names emailed by 5 PM the night before.",
+    "due_at": "2026-11-05T10:05:00-05:00",
+    "due_precision": "datetime",
+    "canvas_url": "https://yale.instructure.com/courses/122176",
+    "sources": [{ "type": "syllabus", "ref": "State and Society 2026 syllabus v6, Appendix B" }],
+    "cohort_scope": "silver"
+  },
+  {
+    "id": "customer-case-2-stickk",
+    "course": "customer",
+    "title": "Case Write-Up #2: stickK.com",
+    "kind": "case_writeup",
+    "work": "individual",
+    "due_at": "2026-11-10T08:30:00-05:00",
+    "due_precision": "datetime",
+    "points": 10,
+    "canvas_url": "https://yale.instructure.com/courses/122174/assignments/611388",
+    "canvas_assignment_id": 611388,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122174/assignments/611388"
+      }
+    ],
+    "cohort_scope": "silver"
+  },
+  {
+    "id": "investor-homework-1",
+    "course": "investor",
+    "title": "Homework 1",
+    "kind": "homework",
+    "work": "group",
+    "group_note": "Homework group of up to four; one submission per group.",
+    "due_at": "2026-11-11T23:59:00-05:00",
+    "due_precision": "datetime",
+    "points": 0,
+    "canvas_url": "https://yale.instructure.com/courses/122175/assignments/609743",
+    "canvas_assignment_id": 609743,
+    "sources": [
+      {
+        "type": "canvas_assignment",
+        "ref": "https://yale.instructure.com/courses/122175/assignments/609743"
+      }
+    ],
+    "cohort_scope": "all"
+  },
+  {
+    "id": "competitor-final-exam",
+    "course": "competitor",
+    "title": "Final exam",
+    "kind": "exam",
+    "work": "individual",
+    "due_at": "2026-12-17T09:00:00-05:00",
+    "due_precision": "datetime",
+    "description_html": "<p>Closed-book written exam covering all course material, 9 a.m. to noon.</p>",
+    "canvas_url": "https://yale.instructure.com/courses/122173",
+    "sources": [{ "type": "syllabus", "ref": "Competitor 2026 syllabus, Exam" }],
+    "cohort_scope": "all"
+  }
+]

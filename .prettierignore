@@ -1,0 +1,5 @@
+node_modules
+dist
+.claude/skills
+.claude/worktrees
+package-lock.json
