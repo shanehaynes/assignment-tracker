@@ -2,14 +2,15 @@
 
 Phases are ordered. A phase is done when its exit criteria hold and the gate is green.
 
-## Phase 0: Discovery and extraction (this session)
+## Phase 0: Discovery and extraction (done 2026-11-02)
 
 - Identify the four Fall-2 course sites on Canvas and Shane's section in each.
 - Pull assignments, announcements, syllabus bodies, files, and calendar events through the signed-in Canvas session.
 - Read syllabi, lecture decks, and reading packets; extract every deliverable; resolve cohort variants to Silver; verify each item against its sources.
 - Exit: `data/assignments.json` with provenance for every item; a written list of anything uncertain.
+- Result: 31 items. Each was extracted by two independent lenses (plus vision readers for image-only decks), reconciled per course, and checked by two skeptical verifiers; a completeness critic ran per course. Open questions live in each item's `notes` and in STATUS.md.
 
-## Phase 1: Tracker MVP (this session)
+## Phase 1: Tracker MVP (in progress 2026-11-02)
 
 - Block list of deliverables ordered by due date, grouped by day.
 - Filters: course (multi-select), date window (today, this week, next two weeks, all, past due), kind, hide-done.
