@@ -13,7 +13,6 @@ _Updated 2026-11-02 by the day-0 session._
 
 ## Pending for Shane
 
-- [ ] Push `main` to GitHub: `git push -u origin main` from the primary checkout (the session could not publish).
 
 - [ ] The GitHub repository is **public**; `data/assignments.json` carries Canvas descriptions. `gh repo edit shanehaynes/assignment-tracker --visibility private --accept-visibility-change-consequences` makes it private.
 - [ ] Apply merge settings (squash only, branches up to date, auto-delete, required check `check`) — checklist in docs/decisions/2026-11-02-merge-settings.md.
