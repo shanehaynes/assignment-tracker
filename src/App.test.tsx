@@ -3,7 +3,7 @@ import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testi
 import userEvent from '@testing-library/user-event'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import App from './App.tsx'
-import { ASSIGNMENTS } from './data.ts'
+import { ASSIGNMENTS, QUOTES as SHIPPED_QUOTES } from './data.ts'
 import { createMemoryStore, STORAGE_KEY, type ProgressStore } from './progress.ts'
 import type { Assignment, Progress, Quote, Semester } from './types.ts'
 
@@ -423,5 +423,12 @@ describe('Quote of the day', () => {
   it('renders no motto when the bank is empty', () => {
     show(NOW, [])
     expect(within(progress()).queryByTestId('motto')).not.toBeInTheDocument()
+  })
+
+  it('draws from the shipped bank when no quotes prop is given', () => {
+    render(<App assignments={ITEMS} semester={SEMESTER} now={NOW} store={createMemoryStore()} />)
+    // NOW is day 9 of a term starting Oct 26, the same start data/semester.json uses.
+    const expected = SHIPPED_QUOTES[9 % SHIPPED_QUOTES.length]
+    expect(within(progress()).getByTestId('motto-text').textContent).toBe(expected.text)
   })
 })

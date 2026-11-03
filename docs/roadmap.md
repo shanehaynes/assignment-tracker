@@ -27,6 +27,12 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 - `.github/workflows/pages.yml` runs the gate, builds with the `/assignment-tracker/` base, stamps `version.json`, and deploys on every push to `main`.
 - Exit: https://shanehaynes.github.io/assignment-tracker/ serves the current `main`, and `version.json` names its SHA.
 
+## Phase 1c: Quote of the day (done 2026-11-03)
+
+- The progress strip shows one line a day from `data/quotes.json`: `quotes[((d mod n) + n) mod n]`, with `d` the whole Eastern days since `semester.start`, so the line changes at midnight Eastern without a reload.
+- The bank is curated and source-verified: every entry carries author, work, locator and the URL its wording was checked against. `data/quotes.test.ts` holds it to 30 words a line, no duplicates, at most three lines per author, the Camus line included.
+- Exit: the live page shows today's line.
+
 ## Phase 2: Refresh script
 
 - `scripts/refresh.py`: given a Canvas API token in the environment, re-pull Canvas-native assignments and submission state for the configured courses; emit a diff against `data/assignments.json` (new, changed date, removed) rather than overwriting curated fields.

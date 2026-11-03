@@ -192,7 +192,7 @@ export default function ProgressStrip({
           </span>
           <span className="motto-by">
             {' '}
-            — {quote.author}, {quote.work}
+            —&nbsp;{quote.author}, {quote.work}
           </span>
         </p>
       ) : null}

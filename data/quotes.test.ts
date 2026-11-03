@@ -18,10 +18,15 @@ describe('data/quotes.json', () => {
     for (const q of bank) {
       expect(q.text, q.text).toBe(q.text.trim())
       expect(q.text.length, q.text).toBeGreaterThan(0)
-      expect(q.author.trim().length, q.text).toBeGreaterThan(0)
-      expect(q.work.trim().length, q.text).toBeGreaterThan(0)
+      expect(q.author, q.text).toBe(q.author.trim())
+      expect(q.author.length, q.text).toBeGreaterThan(0)
+      expect(q.work, q.text).toBe(q.work.trim())
+      expect(q.work.length, q.text).toBeGreaterThan(0)
       expect(q.source_url, q.text).toMatch(/^https:\/\/\S+$/)
-      if (q.locator !== undefined) expect(q.locator.trim().length, q.text).toBeGreaterThan(0)
+      if (q.locator !== undefined) {
+        expect(q.locator, q.text).toBe(q.locator.trim())
+        expect(q.locator.length, q.text).toBeGreaterThan(0)
+      }
     }
   })
 
@@ -37,7 +42,7 @@ describe('data/quotes.json', () => {
     const keys = bank.map((q) => key(q.text))
     expect(new Set(keys).size).toBe(keys.length)
     const perAuthor = new Map<string, number>()
-    for (const q of bank) perAuthor.set(q.author, (perAuthor.get(q.author) ?? 0) + 1)
+    for (const q of bank) perAuthor.set(key(q.author), (perAuthor.get(key(q.author)) ?? 0) + 1)
     for (const [author, n] of perAuthor) expect(n, author).toBeLessThanOrEqual(3)
   })
 

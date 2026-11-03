@@ -93,3 +93,14 @@ describe('quoteForDate', () => {
     }
   })
 })
+
+describe('quoteForDate with another semester start', () => {
+  it('counts days from the start it is given, not from a fixed date', () => {
+    const spring = { start: '2027-01-19' }
+    expect(quoteForDate(BANK, spring, new Date('2027-01-19T08:00:00-05:00'))).toBe(BANK[0])
+    expect(quoteForDate(BANK, spring, new Date('2027-01-21T08:00:00-05:00'))).toBe(BANK[2])
+    expect(quoteForDate(BANK, spring, new Date('2027-01-18T08:00:00-05:00'))).toBe(BANK[2])
+    // The same instant against the Oct 26 start is day 87: 87 mod 3 = 0.
+    expect(quoteForDate(BANK, SEMESTER, new Date('2027-01-21T08:00:00-05:00'))).toBe(BANK[0])
+  })
+})
