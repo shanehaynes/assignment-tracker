@@ -7,7 +7,6 @@
 
 import { cleanup, screen, within } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
-import { semester } from './fixtures.ts'
 import { progressSection, renderTracker, termText, workText } from './harness.ts'
 
 afterEach(() => {
