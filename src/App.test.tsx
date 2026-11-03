@@ -16,8 +16,6 @@ const SEMESTER: Semester = {
   start: '2026-10-26',
   end: '2027-03-08',
   milestones: [{ date: '2026-11-23', end: '2026-11-27', label: 'November recess' }],
-  motto: 'Keep going.',
-  motto_attribution: 'Someone',
 }
 
 const base = {
@@ -135,7 +133,6 @@ describe('App contract', () => {
     const progress = screen.getByRole('region', { name: 'Progress' })
     expect(within(progress).getByTestId('progress-time')).toHaveTextContent('7% of the term')
     expect(within(progress).getByTestId('progress-work')).toHaveTextContent('0 of 4 done')
-    expect(within(progress).getByTestId('motto')).toHaveTextContent('Keep going.')
     expect(rowIds()).toEqual(['case-1', 'memo-1', 'hw-1', 'exam'])
   })
 

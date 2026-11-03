@@ -176,15 +176,6 @@ export default function ProgressStrip({ semester, now, done, total, saveFailed }
       <p className="save-note" role="status">
         {saveFailed ? 'Not saved' : ''}
       </p>
-
-      {semester.motto ? (
-        <p className="motto" data-testid="motto">
-          <span className="motto-text">{semester.motto}</span>
-          {semester.motto_attribution ? (
-            <span className="motto-by"> — {semester.motto_attribution}</span>
-          ) : null}
-        </p>
-      ) : null}
     </section>
   )
 }
