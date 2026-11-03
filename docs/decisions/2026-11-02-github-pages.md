@@ -18,6 +18,8 @@ GitHub Pages, built by `.github/workflows/pages.yml` on every push to `main`: th
 
 Post-deploy check: `curl -s https://shanehaynes.github.io/assignment-tracker/version.json` reports the merged SHA.
 
+Enabling the site was a one-time manual step. `actions/configure-pages` with `enablement: true` cannot create the Pages site with the workflow token (the first run on 2026-11-03 failed in `build` with "Resource not accessible by integration"), so the site was created once with Shane's own credentials: `gh api -X POST repos/shanehaynes/assignment-tracker/pages -f build_type=workflow`. The flag is harmless now that the site exists; a fresh fork or a renamed repository needs that command again before its first deploy.
+
 ## Revisit when
 
 - Done-marks need to follow Shane across devices (then a small hosted store, or syncing `data/progress.json` through the repo, replaces the per-browser fallback).
