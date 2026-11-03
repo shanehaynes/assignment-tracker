@@ -1,9 +1,219 @@
 [
   {
+    "text": "Winning does not tempt that man. This is how he grows: by being defeated, decisively, by constantly greater beings.",
+    "author": "Rainer Maria Rilke",
+    "work": "The Man Watching",
+    "locator": "The Book of Images; final lines; tr. Robert Bly",
+    "source_url": "https://poetry-chaikhana.com/Poets/R/RilkeRainerM/ManWatching/index.html"
+  },
+  {
+    "text": "Real joy, believe me, is a stern matter.",
+    "author": "Seneca",
+    "work": "Moral Letters to Lucilius",
+    "locator": "Letter 23, §4; tr. Richard M. Gummere (Loeb, 1917)",
+    "source_url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_23"
+  },
+  {
+    "text": "If you march your Winter Journeys you will have your reward, so long as all you want is a penguin's egg.",
+    "author": "Apsley Cherry-Garrard",
+    "work": "The Worst Journey in the World",
+    "locator": "Chapter XIX, \"Never Again\", final sentence of the main text (1922)",
+    "source_url": "https://www.gutenberg.org/cache/epub/14363/pg14363.txt"
+  },
+  {
+    "text": "The crucial thing is to find a truth which is truth for me, to find the idea for which I am willing to live and die.",
+    "author": "Søren Kierkegaard",
+    "work": "Journals and Papers",
+    "locator": "Gilleleje, 1 August 1835; Papirer I A 75; tr. Howard V. and Edna H. Hong",
+    "source_url": "https://en.wikiquote.org/wiki/S%C3%B8ren_Kierkegaard"
+  },
+  {
+    "text": "When you do something, you should burn yourself completely, like a good bonfire, leaving no trace of yourself.",
+    "author": "Shunryu Suzuki",
+    "work": "Zen Mind, Beginner's Mind",
+    "locator": "Part Two, \"Right Attitude\", chapter \"No Trace\"",
+    "source_url": "https://archive.org/stream/dt-suzuki-zen-mind-beginners-mind/DT%20Suzuki%20-%20Zen%20Mind%2C%20Beginner%27s%20Mind_djvu.txt"
+  },
+  {
+    "text": "The lucidity that was to constitute his torture at the same time crowns his victory. There is no fate that cannot be surmounted by scorn.",
+    "author": "Albert Camus",
+    "work": "The Myth of Sisyphus",
+    "locator": "Final chapter, \"The Myth of Sisyphus\"; tr. Justin O'Brien",
+    "source_url": "https://www.d.umn.edu/~tbacig/cst1010/chs/camus.html"
+  },
+  {
+    "text": "How dull it is to pause, to make an end, / To rust unburnish'd, not to shine in use!",
+    "author": "Alfred, Lord Tennyson",
+    "work": "Ulysses",
+    "locator": "lines 22–23 (Poems, 1842)",
+    "source_url": "https://en.wikisource.org/wiki/Ulysses_(Tennyson)"
+  },
+  {
+    "text": "You could leave life right now. Let that determine what you do and say and think.",
+    "author": "Marcus Aurelius",
+    "work": "Meditations",
+    "locator": "Book 2, §11; tr. Gregory Hays",
+    "source_url": "https://en.wikiquote.org/wiki/Marcus_Aurelius"
+  },
+  {
+    "text": "Respect Buddha and the gods without counting on their help.",
+    "author": "Miyamoto Musashi",
+    "work": "Dokkōdō",
+    "locator": "Precept 19 of 21 (1645); tr. Kenji Tokitsu / Sherab Chödzin Kohn",
+    "source_url": "https://en.wikiquote.org/wiki/Miyamoto_Musashi"
+  },
+  {
+    "text": "We run carelessly to the precipice, after we have put something before us to prevent us seeing it.",
+    "author": "Blaise Pascal",
+    "work": "Pensées",
+    "locator": "Brunschvicg 183 (Lafuma 166; Sellier 198); tr. W. F. Trotter",
+    "source_url": "https://www.gutenberg.org/files/18269/18269-h/18269-h.htm"
+  },
+  {
+    "text": "Philosophy, as I have so far understood and lived it, means living voluntarily among ice and high mountains—seeking out everything strange and questionable in existence, everything so far placed under a ban by morality.",
+    "author": "Friedrich Nietzsche",
+    "work": "Ecce Homo",
+    "locator": "Preface, §3; tr. Walter Kaufmann",
+    "source_url": "https://en.wikiquote.org/wiki/Ecce_Homo_(book)"
+  },
+  {
+    "text": "For somewhere there is an ancient enmity / between our daily life and the great work.",
+    "author": "Rainer Maria Rilke",
+    "work": "Requiem for a Friend",
+    "locator": "Near the close of the poem (1908); tr. Stephen Mitchell",
+    "source_url": "https://muse.jhu.edu/article/482314/"
+  },
+  {
+    "text": "We took risks, we knew we took them; things have come out against us, and therefore we have no cause for complaint, but bow to the will of Providence, determined still to do our best to the last.",
+    "author": "Robert Falcon Scott",
+    "work": "Scott's Last Expedition",
+    "locator": "\"Message to the Public\", March 1912 (Vol. I, 1913)",
+    "source_url": "https://www.gutenberg.org/cache/epub/11579/pg11579.txt"
+  },
+  {
+    "text": "But all things excellent are as difficult as they are rare.",
+    "author": "Baruch Spinoza",
+    "work": "Ethics",
+    "locator": "Part V, Proposition 42, Scholium, final sentence; tr. R. H. M. Elwes",
+    "source_url": "https://www.gutenberg.org/files/3800/3800-h/3800-h.htm"
+  },
+  {
+    "text": "We must prefer real hell to an imaginary paradise.",
+    "author": "Simone Weil",
+    "work": "Gravity and Grace",
+    "locator": "Chapter \"Illusions\"; tr. Emma Crawford and Mario von der Ruhr",
+    "source_url": "https://theanarchistlibrary.org/library/simone-weil-gravity-and-grace"
+  },
+  {
     "text": "The struggle itself toward the heights is enough to fill a man's heart.",
     "author": "Albert Camus",
     "work": "The Myth of Sisyphus",
-    "locator": "closing paragraph",
+    "locator": "Closing paragraph; tr. Justin O'Brien",
     "source_url": "https://en.wikiquote.org/wiki/Albert_Camus"
+  },
+  {
+    "text": "If by setting one's heart right every morning and evening, one is able to live as though his body were already dead, he gains freedom in the Way.",
+    "author": "Yamamoto Tsunetomo",
+    "work": "Hagakure",
+    "locator": "Chapter 1, the passage beginning \"The Way of the Samurai is found in death\"; tr. William Scott Wilson",
+    "source_url": "https://en.wikiquote.org/wiki/Yamamoto_Tsunetomo"
+  },
+  {
+    "text": "He only earns his freedom and existence, / Who daily conquers them anew.",
+    "author": "Johann Wolfgang von Goethe",
+    "work": "Faust, Part Two",
+    "locator": "Act V, Faust's last speech (German ll. 11575–76); tr. Bayard Taylor",
+    "source_url": "https://en.wikisource.org/wiki/Faust_(trans._Bayard_Taylor)/Act_V/VI"
+  },
+  {
+    "text": "Whoever has learned to be anxious in the right way has learned the ultimate.",
+    "author": "Søren Kierkegaard",
+    "work": "The Concept of Anxiety",
+    "locator": "Chapter V, \"Anxiety as Saving through Faith\"; tr. Reidar Thomte with Albert B. Anderson",
+    "source_url": "https://plato.stanford.edu/entries/kierkegaard/"
+  },
+  {
+    "text": "Have we vanquished an enemy? None but ourselves. Have we gained success? That word means nothing here.",
+    "author": "George Leigh Mallory",
+    "work": "Mont Blanc from the Col du Géant",
+    "locator": "The Alpine Journal, vol. 32 (1918), p. 162",
+    "source_url": "https://www.alpinejournal.org.uk/Contents/Contents_1918_files/AJ%201918%20Vol%2032%20148-162%20Mallory%20Mt%20Blanc%20from%20Col%20du%20Geant.pdf"
+  },
+  {
+    "text": "Ivan Ilych's life had been most simple and most ordinary and therefore most terrible.",
+    "author": "Leo Tolstoy",
+    "work": "The Death of Ivan Ilych",
+    "locator": "Chapter II, opening sentence; tr. Louise and Aylmer Maude",
+    "source_url": "https://en.wikisource.org/wiki/The_Death_of_Ivan_Ilych/II"
+  },
+  {
+    "text": "I judge you unfortunate because you have never been unfortunate; you have passed through life without an antagonist; no one will know what you can do,—not even yourself.",
+    "author": "Seneca",
+    "work": "On Providence",
+    "locator": "De Providentia 4.3; tr. John W. Basore (Loeb)",
+    "source_url": "https://www.stoics.com/seneca_essays_book_1.html"
+  },
+  {
+    "text": "Perhaps the nearness of death will bring me the light of life.",
+    "author": "Ludwig Wittgenstein",
+    "work": "Private Notebooks",
+    "locator": "MS 103, entry of 4 May 1916; quoted in Ray Monk, Ludwig Wittgenstein: The Duty of Genius (1990), p. 138",
+    "source_url": "https://www.arnongrunberg.com/now/blog/6710-company"
+  },
+  {
+    "text": "Shall we be fill'd and satisfied then? / And my spirit said No, we but level that lift to pass and continue beyond.",
+    "author": "Walt Whitman",
+    "work": "Song of Myself",
+    "locator": "Section 46 (Leaves of Grass, 1891–92)",
+    "source_url": "https://www.gutenberg.org/cache/epub/1322/pg1322.txt"
+  },
+  {
+    "text": "Remember that now is the contest, now are the Olympic games, and they cannot be deferred.",
+    "author": "Epictetus",
+    "work": "Enchiridion",
+    "locator": "Chapter 51 (50 in Long's numbering); tr. George Long",
+    "source_url": "https://gutenberg.org/cache/epub/10661/pg10661-images.html"
+  },
+  {
+    "text": "Courage, however, is the best slayer—courage which attacks: which slays even death itself, for it says, \"Was that life? Well then! Once more!\"",
+    "author": "Friedrich Nietzsche",
+    "work": "Thus Spoke Zarathustra",
+    "locator": "Third Part, \"On the Vision and the Riddle\", §1; tr. Walter Kaufmann",
+    "source_url": "https://archive.org/stream/the-portable-nietzsche-walter-kaufmann/The%20portable%20nietzsche%2C%20Walter%20Kaufmann_djvu.txt"
+  },
+  {
+    "text": "For here there is no place that does not see you. You must change your life.",
+    "author": "Rainer Maria Rilke",
+    "work": "Archaic Torso of Apollo",
+    "locator": "Final lines (New Poems, 1908); tr. Stephen Mitchell",
+    "source_url": "https://poets.org/poem/archaic-torso-apollo"
+  },
+  {
+    "text": "I want death to find me planting my cabbages, but careless of death, and still more of my unfinished garden.",
+    "author": "Michel de Montaigne",
+    "work": "Essays",
+    "locator": "Book I, chapter 20, \"That to Philosophize Is to Learn to Die\"; tr. Donald M. Frame",
+    "source_url": "https://en.wikiquote.org/wiki/Michel_de_Montaigne"
+  },
+  {
+    "text": "The bow bends; the wood complains. At the moment of supreme tension, there will leap into flight an unswerving arrow, a shaft that is inflexible and free.",
+    "author": "Albert Camus",
+    "work": "The Rebel",
+    "locator": "Closing lines of \"Beyond Nihilism\"; tr. Anthony Bower",
+    "source_url": "https://archive.org/stream/in.ernet.dli.2015.507721/2015.507721.The-Rebel_djvu.txt"
+  },
+  {
+    "text": "I would hate that death bandaged my eyes and forbore, / And bade me creep past. / No! let me taste the whole of it.",
+    "author": "Robert Browning",
+    "work": "Prospice",
+    "locator": "lines 15–17 (Dramatis Personae, 1864)",
+    "source_url": "https://rpo.library.utoronto.ca/poems/prospice"
+  },
+  {
+    "text": "One thing is needful.—To \"give style\" to one's character—a great and rare art!",
+    "author": "Friedrich Nietzsche",
+    "work": "The Gay Science",
+    "locator": "Book IV, §290; tr. Walter Kaufmann",
+    "source_url": "https://en.wikiquote.org/wiki/The_Gay_Science"
   }
 ]

@@ -33,8 +33,8 @@ describe('data/quotes.json', () => {
   it('keeps every quote to forty words and free of surrounding quotation marks', () => {
     for (const q of bank) {
       expect(words(q.text), q.text).toBeLessThanOrEqual(40)
+      // A line may end inside a quotation (Zarathustra's "Once more!"); it must not open with one.
       expect(q.text, q.text).not.toMatch(/^["“”'‘’]/)
-      expect(q.text, q.text).not.toMatch(/["“”]$/)
     }
   })
 
