@@ -4,8 +4,11 @@ import { devPort } from './dev/port.ts'
 import { progressPlugin } from './dev/progress-plugin.ts'
 
 const port = devPort()
+// GitHub Pages serves the app under /assignment-tracker/; the Pages workflow sets VITE_BASE.
+const base = process.env.VITE_BASE ?? '/'
 
 export default defineConfig({
+  base,
   plugins: [react(), progressPlugin()],
   server: { port, strictPort: true },
   preview: { port, strictPort: true },

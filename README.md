@@ -2,9 +2,11 @@
 
 Every Fall-2 deliverable for Yale SOM's Silver cohort, in one list, with the term's progress at the top. Local, single-user.
 
+Live: https://shanehaynes.github.io/assignment-tracker/ (static; done-marks stay in that browser).
+
 ```bash
 npm install
-npm run dev      # http://localhost:5173
+npm run dev      # http://localhost:5173, done-marks persist to data/progress.json
 npm run check    # typecheck, tests, lint, format
 ```
 

@@ -6,7 +6,7 @@ A single-page tracker of every deliverable Shane owes in his current Yale SOM qu
 
 ## Who it is for
 
-One user: Shane Haynes, Yale SOM MBA Class of 2028, Silver cohort. Locally hosted, no accounts, no sharing.
+One user: Shane Haynes, Yale SOM MBA Class of 2028, Silver cohort. Runs locally; a static copy is published to GitHub Pages for convenience. No accounts.
 
 ## The problem
 
@@ -41,4 +41,4 @@ Canvas's own to-do list shows all five cohort variants, hides syllabus-only item
 - Courses outside the four Fall-2 core courses (the MBA Class of 2028 site, Venture Development Program).
 - Other cohorts' dates.
 - Submitting work, grades, or two-way sync with Canvas.
-- Multi-user or hosted deployment.
+- Multi-user support. (A static public copy on GitHub Pages exists; it is not multi-user and keeps done-marks per browser.)

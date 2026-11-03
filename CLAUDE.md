@@ -43,7 +43,7 @@ Not in the gate: nothing yet. CI does not cover: a real browser (no e2e), the Ca
 
 ## Environments and secrets
 
-None. There is no `.env`; the app reads committed JSON. Progress is written by the dev server to `data/progress.json`. Deploy: none — see [docs/decisions/2026-11-02-deploy-target.md](docs/decisions/2026-11-02-deploy-target.md).
+No secrets. There is no `.env`; the app reads committed JSON. Progress is written by the dev server to `data/progress.json`. Deploy: GitHub Pages from `main` via `.github/workflows/pages.yml` (see [docs/decisions/2026-11-02-github-pages.md](docs/decisions/2026-11-02-github-pages.md)); after a merge, confirm `https://shanehaynes.github.io/assignment-tracker/version.json` reports the merged SHA. The Pages build sets `VITE_BASE=/assignment-tracker/`; never hard-code that base.
 
 ## Merging
 
