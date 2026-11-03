@@ -5,11 +5,12 @@ import { act, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { expect } from 'vitest'
 import App from '../../src/App.tsx'
-import type { Assignment, Semester } from '../../src/types.ts'
+import type { Assignment, Quote, Semester } from '../../src/types.ts'
 import {
   assignments as defaultAssignments,
   createTestStore,
   NOW,
+  quotes as defaultQuotes,
   semester as defaultSemester,
   type TestStore,
   type TrackerProps,
@@ -22,6 +23,7 @@ export type RenderOptions = {
   semester?: Semester
   now?: Date
   store?: TestStore
+  quotes?: Quote[]
 }
 
 /** Renders the tracker and waits until its single store.load() call has resolved and been applied. */
@@ -34,13 +36,17 @@ export async function renderTracker(options: RenderOptions = {}) {
     semester: options.semester ?? defaultSemester,
     now: options.now ?? NOW,
     store,
+    quotes: options.quotes ?? defaultQuotes,
   }
   const view = render(createElement(Tracker, props))
   await waitFor(() => expect(store.load).toHaveBeenCalledTimes(loadsBefore + 1))
   await act(async () => {
     await new Promise((resolve) => setTimeout(resolve, 0))
   })
-  return { ...view, store, user, props }
+  /** Re-renders the same mounted tracker with some props replaced (no remount, no second load). */
+  const rerenderWith = (overrides: Partial<TrackerProps>) =>
+    view.rerender(createElement(Tracker, { ...props, ...overrides }))
+  return { ...view, store, user, props, rerenderWith }
 }
 
 /** Collapses every whitespace run (including no-break and narrow no-break spaces) to one space. */
