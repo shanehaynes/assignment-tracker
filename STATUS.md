@@ -1,6 +1,6 @@
 # Status
 
-_Updated 2026-11-03 after the Pages deploy._
+_Updated 2026-11-03 after the merge settings were applied._
 
 ## Workstreams
 
@@ -14,7 +14,7 @@ _Updated 2026-11-03 after the Pages deploy._
 
 ## Pending for Shane
 
-- [ ] Apply merge settings (squash only, branches up to date, auto-delete, required check `check`) — checklist in docs/decisions/2026-11-02-merge-settings.md.
+- [x] Merge settings applied 2026-11-03 through the API with Shane's gh login: squash only, merged branches auto-deleted, `main` protected (required check `check`, branch up to date, linear history, no force pushes or deletions, admins included). Record: docs/decisions/2026-11-02-merge-settings.md.
 
 ## Open questions from the extraction (confirm with the TAs or on Canvas)
 
