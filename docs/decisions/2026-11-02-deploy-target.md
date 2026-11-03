@@ -1,6 +1,6 @@
 # No deploy target
 
-Date: 2026-11-02 · Status: accepted
+Date: 2026-11-02 · Status: superseded by [2026-11-02-github-pages.md](2026-11-02-github-pages.md)
 
 ## Context
 
