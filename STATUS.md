@@ -1,16 +1,16 @@
 # Status
 
-_Updated 2026-11-02 by the day-0 session._
+_Updated 2026-11-03 after the Pages deploy._
 
 ## Workstreams
 
-| Workstream                  | Branch / claim            | State       | Next step                                                                                          |
-| --------------------------- | ------------------------- | ----------- | -------------------------------------------------------------------------------------------------- |
-| Day-0 setup                 | main                      | done        | —                                                                                                  |
-| Fall-2 extraction (Phase 0) | data/fall2-extraction     | done        | re-run when Canvas changes (memo prompts unlock Nov 11, Nov 18, Dec 4; Investor homework handouts) |
-| Tracker UI (Phase 1)        | feat/tracker-ui           | not started | build to docs/ui-contract.md                                                                       |
-| GitHub Pages (Phase 1b)     | feat/github-pages         | in review   | merge; confirm version.json on the live page                                                       |
-| Acceptance tests (Phase 1)  | verify/tracker-acceptance | not started | write from the contract only                                                                       |
+| Workstream                  | Branch / claim        | State                    | Next step                                                                                                      |
+| --------------------------- | --------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| Day-0 setup                 | main                  | done                     | —                                                                                                              |
+| Fall-2 extraction (Phase 0) | data/fall2-extraction | done                     | re-run when Canvas changes (memo prompts unlock Nov 11, Nov 18, Dec 4; Investor homework handouts)             |
+| Tracker UI (Phase 1)        | main                  | done (merged 2026-11-02) | Phase 2 refresh script, per docs/roadmap.md                                                                    |
+| GitHub Pages (Phase 1b)     | main                  | done (live 2026-11-03)   | after each merge, confirm https://shanehaynes.github.io/assignment-tracker/version.json reports the merged SHA |
+| Acceptance tests (Phase 1)  | main                  | done (merged 2026-11-02) | extend from the contract only when the contract changes                                                        |
 
 ## Pending for Shane
 
@@ -27,7 +27,8 @@ _Updated 2026-11-02 by the day-0 session._
 
 ## Known gaps
 
-- The repository is public by Shane's decision (2026-11-02); `data/assignments.json` carries Canvas descriptions and syllabus excerpts.
+- The repository is public by Shane's decision (2026-11-02); `data/assignments.json` carries Canvas descriptions and syllabus excerpts, and the Pages site serves them.
+- On the hosted page, done-marks live in that browser's `localStorage` only; `npm run dev` is what writes `data/progress.json`.
 
 - Two browser tabs on the dev server overwrite each other's done-marks (last writer wins); see the roadmap's Phase 4.
 - Memo 2-4 and Investor homework descriptions are empty on Canvas until their prompts unlock; re-run the extraction after Nov 11, Nov 18, Dec 4.
