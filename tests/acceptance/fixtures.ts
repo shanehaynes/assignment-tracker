@@ -4,7 +4,7 @@
 // substring check on a list item's text is unambiguous (tracker.test.tsx asserts this).
 
 import { vi, type Mock } from 'vitest'
-import type { Assignment, CourseId, Kind, Progress, Semester } from '../../src/types.ts'
+import type { Assignment, CourseId, Kind, Progress, Quote, Semester } from '../../src/types.ts'
 
 // The contract's injection surface, declared here so the tests do not depend on src/progress.ts.
 export type ProgressStore = { load(): Promise<Progress>; save(p: Progress): Promise<void> }
@@ -14,6 +14,7 @@ export type TrackerProps = {
   semester?: Semester
   now?: Date
   store?: ProgressStore
+  quotes?: Quote[]
 }
 
 // Monday, Nov 2 2026, noon Eastern. DST ended Sunday Nov 1, so Eastern is UTC-5 (EST).
@@ -251,6 +252,44 @@ export const assignments: Assignment[] = [
   pastFortnight,
   thisWeek,
   nextWeek,
+]
+
+// A five-entry quote bank, invented for the tests. Texts, authors and works are pairwise distinct,
+// none is a substring of another, and none contains a digit or a word the other tests look for.
+// The quote of the day is quotes[((d mod 5) + 5) mod 5], d = Eastern days since 2026-10-26.
+export const quotes: Quote[] = [
+  {
+    text: 'Begin where the path is steepest.',
+    author: 'Ada Fenwick',
+    work: 'Notes from the Ridge',
+    locator: 'first entry',
+    source_url: 'https://example.org/quotes/fenwick-ridge',
+  },
+  {
+    text: 'Carry the stone, and the stone carries you.',
+    author: 'Tomas Ilves',
+    work: 'The Quarry Letters',
+    source_url: 'https://example.org/quotes/ilves-quarry',
+  },
+  {
+    text: 'Every summit is a question asked twice.',
+    author: 'Mira Okafor',
+    work: 'Field Journal of a Slow Climber',
+    locator: 'chapter on descent',
+    source_url: 'https://example.org/quotes/okafor-journal',
+  },
+  {
+    text: 'Rest is the labour that waits its turn.',
+    author: 'Jun Halvorsen',
+    work: 'Small Hours',
+    source_url: 'https://example.org/quotes/halvorsen-hours',
+  },
+  {
+    text: 'The lamp does not argue with the dark.',
+    author: 'Esther Quill',
+    work: 'Lanterns and Other Essays',
+    source_url: 'https://example.org/quotes/quill-lanterns',
+  },
 ]
 
 export const initialProgress: Progress = {

@@ -8,7 +8,15 @@
 
 import { cleanup, screen, within } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { ids, laterToday, nextWeek, overdue, thisWeek, weekEdgeDateOnly } from './fixtures.ts'
+import {
+  ids,
+  laterToday,
+  nextWeek,
+  overdue,
+  quotes,
+  thisWeek,
+  weekEdgeDateOnly,
+} from './fixtures.ts'
 import {
   itemEl,
   listSection,
@@ -74,5 +82,15 @@ describe('host time zone independence', () => {
     // Host-midnight (London = UTC here) would give 35 / 3192 -> 1%.
     await renderTracker({ now: new Date('2026-10-27T07:00:00-04:00') })
     expect(screen.getByTestId('progress-time')).toHaveTextContent(termText(0))
+  })
+
+  it('switches the quote of the day at midnight Eastern, not host midnight', async () => {
+    // Fixture bank n = 5, d counted from 2026-10-26 (see quotes.test.tsx).
+    // Nov 2 23:59:59 EST = Nov 3 04:59:59 London: Eastern d = 7 -> quotes[2] (host date gives 3).
+    // Nov 3 00:00:00 EST = Nov 3 05:00:00 London: Eastern d = 8 -> quotes[3].
+    const { rerenderWith } = await renderTracker({ now: new Date('2026-11-02T23:59:59-05:00') })
+    expect(screen.getByTestId('motto-text').textContent).toBe(quotes[2].text)
+    rerenderWith({ now: new Date('2026-11-03T00:00:00-05:00') })
+    expect(screen.getByTestId('motto-text').textContent).toBe(quotes[3].text)
   })
 })
