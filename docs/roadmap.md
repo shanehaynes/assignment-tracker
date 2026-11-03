@@ -16,7 +16,7 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 - Filters: course (multi-select), date window (today, this week, next two weeks, all, past due), kind, hide-done.
 - Each block: due date and time, course, title, individual or group, points, done toggle.
 - Detail panel on click: description, sources, notes, link to Canvas.
-- Progress strip: calendar position between first class and spring break next to work completed; milestones marked; optional motto.
+- Progress strip: calendar position between first class and spring break next to work completed; milestones marked; the quote of the day from `data/quotes.json`.
 - Progress persists to `data/progress.json` through the dev server; falls back to `localStorage`.
 - Gate: typecheck, data-validation test, component tests, lint, format check. CI runs it.
 - Exit: Shane can open `npm run dev`, see every item, check one off, restart, and see it still checked.

@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
-import type { Assignment, Progress, ProgressEntry, Semester } from './types.ts'
-import { ASSIGNMENTS, SEMESTER } from './data.ts'
+import type { Assignment, Progress, ProgressEntry, Quote, Semester } from './types.ts'
+import { ASSIGNMENTS, QUOTES, SEMESTER } from './data.ts'
 import { createServerStore, type ProgressStore } from './progress.ts'
 import { dayKey, formatLongDate } from './lib/dates.ts'
 import { DEFAULT_FILTERS, applyFilters, type FilterState } from './lib/filters.ts'
 import { setDone, workCounts } from './lib/progress.ts'
+import { quoteForDate } from './lib/quotes.ts'
 import AssignmentList from './components/AssignmentList.tsx'
 import DetailPanel from './components/DetailPanel.tsx'
 import Filters from './components/Filters.tsx'
@@ -15,6 +16,7 @@ export type AppProps = {
   semester?: Semester
   now?: Date
   store?: ProgressStore
+  quotes?: readonly Quote[]
 }
 
 type FocusRequest =
@@ -54,6 +56,7 @@ export default function App({
   semester = SEMESTER,
   now: fixedNow,
   store: storeProp,
+  quotes = QUOTES,
 }: AppProps) {
   const now = useClock(fixedNow)
   const [ownStore] = useState(() => (storeProp ? null : createServerStore()))
@@ -120,6 +123,7 @@ export default function App({
   }, [store, persist])
 
   const todayKey = dayKey(now)
+  const quote = useMemo(() => quoteForDate(quotes, semester, now), [quotes, semester, now])
   const visible = useMemo(
     () => applyFilters(assignments, filters, progress, now),
     [assignments, filters, progress, now],
@@ -237,6 +241,7 @@ export default function App({
             done={counts.done}
             total={counts.total}
             saveFailed={saveFailed}
+            quote={quote}
           />
           <Filters
             value={filters}

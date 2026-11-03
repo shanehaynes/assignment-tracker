@@ -51,9 +51,22 @@ type Semester = {
   end: string // first day of spring break 2027
   cohort: 'silver'
   milestones: Array<{ date: string; label: string }> // Thanksgiving break, finals, Spring-1 start
-  motto?: string // one optional line shown under the progress strip
 }
 ```
+
+`data/quotes.json` is the quote bank, a curated `Quote[]`; the progress strip shows one a day:
+
+```ts
+type Quote = {
+  text: string // the line, verbatim
+  author: string
+  work: string
+  locator?: string // where in the work, e.g. "closing paragraph"
+  source_url: string // where the wording was verified
+}
+```
+
+The day's quote is `quotes[((d mod n) + n) mod n]`, where `d` is whole days from midnight Eastern on `semester.start` to midnight Eastern today (`src/lib/quotes.ts`).
 
 `data/progress.json` is `{ [assignmentId]: { done: true, at: ISO } }`.
 

@@ -343,11 +343,16 @@ select {
 }
 .motto {
   margin-top: 18px;
+  max-width: 62ch;
   font: italic 14px/1.5 var(--serif);
   color: var(--muted);
+  overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 .motto-by {
   font-style: normal;
+  font-size: 13px;
+  color: var(--faint);
 }
 
 @media (max-width: 559px) {
