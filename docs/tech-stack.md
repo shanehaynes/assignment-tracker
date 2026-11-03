@@ -6,7 +6,7 @@
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Front end      | React 19 + Vite + TypeScript (strict)                                                                                                       | Fast dev server, one config every tool reads, typecheck in the gate. Shane's proven stack.                                                            |
 | Styling        | Plain CSS with custom properties, no framework                                                                                              | A small app with a deliberate look; a utility framework would fight the typography-led design. Light and dark via `prefers-color-scheme`.             |
-| Data           | `data/assignments.json` + `data/semester.json`, committed                                                                                   | The repo is the source of truth. Reviewable diffs when dates change. Imported at build time, validated by a test.                                     |
+| Data           | `data/assignments.json` + `data/semester.json` + `data/quotes.json`, committed                                                              | The repo is the source of truth. Reviewable diffs when dates change. Imported at build time, validated by a test.                                     |
 | Progress state | `data/progress.json` written through a Vite middleware (dev and preview), with `localStorage` fallback                                      | Done-marks must survive cache clears and browser switches. A file in the repo can be inspected and committed. Fallback keeps the static build usable. |
 | Unit tests     | Vitest + Testing Library                                                                                                                    | Shares Vite's config. Data-validation test guards the JSON.                                                                                           |
 | Lint           | oxlint                                                                                                                                      | Fast enough to sit in the gate.                                                                                                                       |
@@ -47,13 +47,29 @@ type Assignment = {
 ```ts
 type Semester = {
   label: string // "Fall-2 2026 through Spring-1 2027"
+  cohort: 'silver'
+  timezone: 'America/New_York'
   start: string // first Fall-2 class, 2026-10-26
   end: string // first day of spring break 2027
-  cohort: 'silver'
-  milestones: Array<{ date: string; label: string }> // Thanksgiving break, finals, Spring-1 start
-  motto?: string // one optional line shown under the progress strip
+  end_label?: string // "Spring break (…)"
+  milestones: Array<{ date: string; end?: string; label: string }> // recesses, finals, Spring-1 start
+  sources?: string[]
 }
 ```
+
+`data/quotes.json` is the quote bank, a curated `Quote[]`; the progress strip shows one a day:
+
+```ts
+type Quote = {
+  text: string // the line, verbatim
+  author: string
+  work: string
+  locator?: string // where in the work, e.g. "closing paragraph"
+  source_url: string // where the wording was verified
+}
+```
+
+The day's quote is `quotes[((d mod n) + n) mod n]`, where `d` is whole days from midnight Eastern on `semester.start` to midnight Eastern today (`src/lib/quotes.ts`).
 
 `data/progress.json` is `{ [assignmentId]: { done: true, at: ISO } }`.
 

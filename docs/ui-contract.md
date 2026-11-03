@@ -12,6 +12,7 @@ The accessible names and test hooks below are the interface between the implemen
 | `semester`    | `Semester`      | `data/semester.json`                                                           |
 | `now`         | `Date`          | `new Date()` at render; every "today", window and progress computation uses it |
 | `store`       | `ProgressStore` | `createServerStore()`                                                          |
+| `quotes`      | `Quote[]`       | `data/quotes.json`                                                             |
 
 `src/progress.ts` exports:
 
@@ -31,7 +32,7 @@ Types come from `src/types.ts` and must not be changed by either lane.
 - `<section aria-label="Progress">`
   - `[data-testid="progress-time"]`: text contains `{n}% of the term`, where n = `floor((now − start) / (end − start) × 100)` clamped to 0–100, with `start` and `end` taken as midnight Eastern on `semester.start` and `semester.end`.
   - `[data-testid="progress-work"]`: text contains `{done} of {total} done`, counting every assignment regardless of filters.
-  - `[data-testid="motto"]` when `semester.motto` is set.
+  - `[data-testid="motto"]` when `quotes` is non-empty; absent when `quotes` is empty. It shows the quote of the day: with `n = quotes.length` and `d` = whole days from midnight Eastern on `semester.start` to midnight Eastern on `now`'s date (negative before the start), the quote is `quotes[((d mod n) + n) mod n]`. Inside it, `[data-testid="motto-text"]` contains exactly the quote's `text`, and the element's full text also contains the quote's `author` and `work`, after the text. Re-rendering with a `now` on another Eastern date shows that date's quote; the switch happens at midnight Eastern, like every other "today" computation.
 - `<form aria-label="Filters">`
   - One checkbox per course with accessible names `Customer`, `Competitor`, `Investor`, `State & Society`; all checked by default. Unchecking hides that course's items.
   - `<select aria-label="Window">` with option values and labels: `all` "All", `today` "Today", `week` "This week", `fortnight` "Next two weeks", `past` "Past due". Default `all`. Semantics, in Eastern time: `today` = due on today's calendar date; `week` = from midnight today through Sunday 23:59 of the current Monday–Sunday week; `fortnight` = from midnight today through 14 days later 23:59; `past` = due before `now`.

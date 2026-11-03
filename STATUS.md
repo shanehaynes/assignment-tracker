@@ -4,13 +4,14 @@ _Updated 2026-11-03 after the Pages deploy._
 
 ## Workstreams
 
-| Workstream                  | Branch / claim        | State                    | Next step                                                                                                      |
-| --------------------------- | --------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| Day-0 setup                 | main                  | done                     | —                                                                                                              |
-| Fall-2 extraction (Phase 0) | data/fall2-extraction | done                     | re-run when Canvas changes (memo prompts unlock Nov 11, Nov 18, Dec 4; Investor homework handouts)             |
-| Tracker UI (Phase 1)        | main                  | done (merged 2026-11-02) | Phase 2 refresh script, per docs/roadmap.md                                                                    |
-| GitHub Pages (Phase 1b)     | main                  | done (live 2026-11-03)   | after each merge, confirm https://shanehaynes.github.io/assignment-tracker/version.json reports the merged SHA |
-| Acceptance tests (Phase 1)  | main                  | done (merged 2026-11-02) | extend from the contract only when the contract changes                                                        |
+| Workstream                  | Branch / claim        | State                    | Next step                                                                                                                       |
+| --------------------------- | --------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| Day-0 setup                 | main                  | done                     | —                                                                                                                               |
+| Fall-2 extraction (Phase 0) | data/fall2-extraction | done                     | re-run when Canvas changes (memo prompts unlock Nov 11, Nov 18, Dec 4; Investor homework handouts)                              |
+| Tracker UI (Phase 1)        | main                  | done (merged 2026-11-02) | Phase 2 refresh script, per docs/roadmap.md                                                                                     |
+| GitHub Pages (Phase 1b)     | main                  | done (live 2026-11-03)   | after each merge, confirm https://shanehaynes.github.io/assignment-tracker/version.json reports the merged SHA                  |
+| Acceptance tests (Phase 1)  | main                  | done (merged 2026-11-02) | extend from the contract only when the contract changes                                                                         |
+| Quote of the day (Phase 1c) | feat/daily-quote      | in review                | curated bank in data/quotes.json; one line a day under the progress strip; merge, then confirm the live page shows today's line |
 
 ## Pending for Shane
 

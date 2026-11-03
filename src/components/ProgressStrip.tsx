@@ -1,5 +1,5 @@
 import { useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { Semester } from '../types.ts'
+import type { Quote, Semester } from '../types.ts'
 import { daysBetween, formatMonthDay, formatMonthDayRange, startOfDay } from '../lib/dates.ts'
 import { layoutTickLabels, shortenings, type TickLabelInput } from '../lib/milestones.ts'
 import { termFraction, termPercent } from '../lib/progress.ts'
@@ -10,6 +10,7 @@ type Props = {
   done: number
   total: number
   saveFailed: boolean
+  quote?: Quote | null
 }
 
 const FALLBACK_TRACK_WIDTH = 560
@@ -36,7 +37,14 @@ function useWidth<T extends HTMLElement>(fallback: number) {
 /** "Spring break (International Experience …)" → "Spring break". */
 const plainLabel = (label: string) => label.replace(/\s*\(.*\)\s*$/, '').trim()
 
-export default function ProgressStrip({ semester, now, done, total, saveFailed }: Props) {
+export default function ProgressStrip({
+  semester,
+  now,
+  done,
+  total,
+  saveFailed,
+  quote = null,
+}: Props) {
   const termId = useId()
   const workId = useId()
   const [ticksRef, trackWidth] = useWidth<HTMLOListElement>(FALLBACK_TRACK_WIDTH)
@@ -177,12 +185,15 @@ export default function ProgressStrip({ semester, now, done, total, saveFailed }
         {saveFailed ? 'Not saved' : ''}
       </p>
 
-      {semester.motto ? (
+      {quote ? (
         <p className="motto" data-testid="motto">
-          <span className="motto-text">{semester.motto}</span>
-          {semester.motto_attribution ? (
-            <span className="motto-by"> — {semester.motto_attribution}</span>
-          ) : null}
+          <span className="motto-text" data-testid="motto-text">
+            {quote.text}
+          </span>
+          <span className="motto-by">
+            {' '}
+            —&nbsp;{quote.author}, {quote.work}
+          </span>
         </p>
       ) : null}
     </section>

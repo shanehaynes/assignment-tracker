@@ -7,7 +7,6 @@
 
 import { cleanup, screen, within } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
-import { semester } from './fixtures.ts'
 import { progressSection, renderTracker, termText, workText } from './harness.ts'
 
 afterEach(() => {
@@ -59,16 +58,5 @@ describe('progress strip', () => {
     // now = 2027-03-09 noon EST: 3229 / 3193 = 101.1% -> clamp to 100.
     await renderTracker({ now: new Date('2027-03-09T12:00:00-05:00') })
     expect(screen.getByTestId('progress-time')).toHaveTextContent(termText(100))
-  })
-
-  it('renders the motto when the semester has one', async () => {
-    await renderTracker()
-    expect(screen.getByTestId('motto')).toHaveTextContent(semester.motto ?? '')
-  })
-
-  it('omits the motto when the semester has none', async () => {
-    await renderTracker({ semester: { ...semester, motto: undefined } })
-    expect(screen.queryByTestId('motto')).toBeNull()
-    expect(screen.getByTestId('progress-time')).toHaveTextContent(termText(5))
   })
 })

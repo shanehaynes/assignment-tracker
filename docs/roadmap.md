@@ -16,7 +16,7 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 - Filters: course (multi-select), date window (today, this week, next two weeks, all, past due), kind, hide-done.
 - Each block: due date and time, course, title, individual or group, points, done toggle.
 - Detail panel on click: description, sources, notes, link to Canvas.
-- Progress strip: calendar position between first class and spring break next to work completed; milestones marked; optional motto.
+- Progress strip: calendar position between first class and spring break next to work completed; milestones marked; the quote of the day from `data/quotes.json`.
 - Progress persists to `data/progress.json` through the dev server; falls back to `localStorage`.
 - Gate: typecheck, data-validation test, component tests, lint, format check. CI runs it.
 - Exit: Shane can open `npm run dev`, see every item, check one off, restart, and see it still checked.
@@ -26,6 +26,12 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 
 - `.github/workflows/pages.yml` runs the gate, builds with the `/assignment-tracker/` base, stamps `version.json`, and deploys on every push to `main`.
 - Exit: https://shanehaynes.github.io/assignment-tracker/ serves the current `main`, and `version.json` names its SHA.
+
+## Phase 1c: Quote of the day (done 2026-11-03)
+
+- The progress strip shows one line a day from `data/quotes.json`: `quotes[((d mod n) + n) mod n]`, with `d` the whole Eastern days since `semester.start`, so the line changes at midnight Eastern without a reload.
+- The bank is curated and source-verified: every entry carries author, work, locator and the URL its wording was checked against. `data/quotes.test.ts` holds it to 40 words a line, no duplicates, at most three lines per author, the Camus line included.
+- Exit: the live page shows today's line.
 
 ## Phase 2: Refresh script
 

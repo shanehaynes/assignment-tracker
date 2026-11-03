@@ -64,10 +64,17 @@ export type Semester = {
   end: string
   end_label?: string
   milestones: Milestone[]
-  motto?: string
-  motto_attribution?: string
   sources?: string[]
 }
 
 export type ProgressEntry = { done: true; at: string }
 export type Progress = Record<string, ProgressEntry>
+
+/** One entry of the quote bank (`data/quotes.json`); the progress strip shows one per day. */
+export type Quote = {
+  text: string
+  author: string
+  work: string
+  locator?: string
+  source_url: string
+}
