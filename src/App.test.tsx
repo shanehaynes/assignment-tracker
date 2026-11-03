@@ -3,9 +3,9 @@ import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testi
 import userEvent from '@testing-library/user-event'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import App from './App.tsx'
-import { ASSIGNMENTS } from './data.ts'
+import { ASSIGNMENTS, QUOTES as SHIPPED_QUOTES } from './data.ts'
 import { createMemoryStore, STORAGE_KEY, type ProgressStore } from './progress.ts'
-import type { Assignment, Progress, Semester } from './types.ts'
+import type { Assignment, Progress, Quote, Semester } from './types.ts'
 
 afterEach(cleanup)
 
@@ -16,8 +16,6 @@ const SEMESTER: Semester = {
   start: '2026-10-26',
   end: '2027-03-08',
   milestones: [{ date: '2026-11-23', end: '2026-11-27', label: 'November recess' }],
-  motto: 'Keep going.',
-  motto_attribution: 'Someone',
 }
 
 const base = {
@@ -135,7 +133,6 @@ describe('App contract', () => {
     const progress = screen.getByRole('region', { name: 'Progress' })
     expect(within(progress).getByTestId('progress-time')).toHaveTextContent('7% of the term')
     expect(within(progress).getByTestId('progress-work')).toHaveTextContent('0 of 4 done')
-    expect(within(progress).getByTestId('motto')).toHaveTextContent('Keep going.')
     expect(rowIds()).toEqual(['case-1', 'memo-1', 'hw-1', 'exam'])
   })
 
@@ -370,5 +367,68 @@ describe('App contract', () => {
     await user.click(screen.getByRole('checkbox', { name: 'Done: Final Exam' }))
     expect(await screen.findByText('Not saved')).toBeInTheDocument()
     expect(screen.getByTestId('progress-work')).toHaveTextContent('1 of 4 done')
+  })
+})
+
+describe('Quote of the day', () => {
+  const QUOTES: Quote[] = [
+    {
+      text: 'Even line.',
+      author: 'First Author',
+      work: 'First Work',
+      source_url: 'https://a.test',
+    },
+    {
+      text: 'Odd line.',
+      author: 'Second Author',
+      work: 'Second Work',
+      source_url: 'https://b.test',
+    },
+  ]
+  const show = (now: Date, quotes: Quote[] = QUOTES) =>
+    render(
+      <App
+        assignments={ITEMS}
+        semester={SEMESTER}
+        now={now}
+        store={createMemoryStore()}
+        quotes={quotes}
+      />,
+    )
+  const progress = () => screen.getByRole('region', { name: 'Progress' })
+
+  it('shows the quote for the Eastern day, with its attribution after the text', () => {
+    // NOW is Nov 4, day 9 of a term starting Oct 26: 9 mod 2 = 1.
+    show(NOW)
+    const motto = within(progress()).getByTestId('motto')
+    expect(within(motto).getByTestId('motto-text').textContent).toBe('Odd line.')
+    expect(motto).toHaveTextContent(/^Odd line\.\s*— Second Author, Second Work$/)
+  })
+
+  it('switches quotes at midnight Eastern', () => {
+    const { rerender } = show(new Date('2026-11-04T23:59:59-05:00'))
+    expect(screen.getByTestId('motto-text').textContent).toBe('Odd line.')
+    rerender(
+      <App
+        assignments={ITEMS}
+        semester={SEMESTER}
+        now={new Date('2026-11-05T00:00:00-05:00')}
+        store={createMemoryStore()}
+        quotes={QUOTES}
+      />,
+    )
+    expect(screen.getByTestId('motto-text').textContent).toBe('Even line.')
+  })
+
+  it('renders no motto when the bank is empty', () => {
+    show(NOW, [])
+    expect(within(progress()).queryByTestId('motto')).not.toBeInTheDocument()
+  })
+
+  it('draws from the shipped bank when no quotes prop is given', () => {
+    render(<App assignments={ITEMS} semester={SEMESTER} now={NOW} store={createMemoryStore()} />)
+    // NOW is day 9 of a term starting Oct 26, the same start data/semester.json uses.
+    const expected = SHIPPED_QUOTES[9 % SHIPPED_QUOTES.length]
+    expect(within(progress()).getByTestId('motto-text').textContent).toBe(expected.text)
   })
 })
