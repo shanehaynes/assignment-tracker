@@ -9,6 +9,7 @@ _Updated 2026-11-02 by the day-0 session._
 | Day-0 setup                 | main                      | done        | —                                                                                                  |
 | Fall-2 extraction (Phase 0) | data/fall2-extraction     | done        | re-run when Canvas changes (memo prompts unlock Nov 11, Nov 18, Dec 4; Investor homework handouts) |
 | Tracker UI (Phase 1)        | feat/tracker-ui           | not started | build to docs/ui-contract.md                                                                       |
+| GitHub Pages (Phase 1b)     | feat/github-pages         | in review   | merge; confirm version.json on the live page                                                       |
 | Acceptance tests (Phase 1)  | verify/tracker-acceptance | not started | write from the contract only                                                                       |
 
 ## Pending for Shane

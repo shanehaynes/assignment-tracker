@@ -22,6 +22,11 @@ Phases are ordered. A phase is done when its exit criteria hold and the gate is 
 - Exit: Shane can open `npm run dev`, see every item, check one off, restart, and see it still checked.
 - Result: built in one lane to docs/ui-contract.md while a second lane wrote 51 acceptance tests from the contract alone; the fold passed on first contact. A four-lens review (correctness, accessibility, design, test integrity) with two skeptics per finding confirmed 17 items, all applied; 114 tests in the gate.
 
+## Phase 1b: GitHub Pages (done 2026-11-02)
+
+- `.github/workflows/pages.yml` runs the gate, builds with the `/assignment-tracker/` base, stamps `version.json`, and deploys on every push to `main`.
+- Exit: https://shanehaynes.github.io/assignment-tracker/ serves the current `main`, and `version.json` names its SHA.
+
 ## Phase 2: Refresh script
 
 - `scripts/refresh.py`: given a Canvas API token in the environment, re-pull Canvas-native assignments and submission state for the configured courses; emit a diff against `data/assignments.json` (new, changed date, removed) rather than overwriting curated fields.
