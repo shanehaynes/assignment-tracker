@@ -60,8 +60,6 @@ export const semester: Semester = {
     { date: '2026-12-15', label: 'Fall-2 classes end' },
     { date: '2027-01-19', label: 'Spring-1 classes begin' },
   ],
-  motto: 'One thing at a time, and that one thing well.',
-  motto_attribution: 'Fixture',
 }
 
 const canvas = (course: number, assignment: number) =>
